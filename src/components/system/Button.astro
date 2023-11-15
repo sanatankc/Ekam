@@ -10,6 +10,7 @@ const {
   type = "button",
   textClass = "",
   buttonClass,
+  iconClass = "",
 } = Astro.props;
 
 const Icon = icon ? icon : FilledArrowCircle;
@@ -49,7 +50,7 @@ const buttonClassName = {
     >
       <slot />
     </Text>
-    <div class="w-5 h-5 ml-2 icon">
+    <div class:list={["w-5 h-5 ml-2 icon", iconClass]}>
       <slot name="icon">
         <Icon />
       </slot>

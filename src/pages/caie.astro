@@ -1,0 +1,182 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import TopNavigationBar from "../components/TopNavigationBar.astro";
+
+import titleBG from "../images/titleBG.png";
+import "../global.css";
+import Footer from "../components/landingPage/Footer.astro";
+import Text from "../components/system/Text.astro";
+import Section from "../components/system/Section.astro";
+import GoToCta from "../components/GoToCta.astro";
+import Pedagogy from "../components/academics/pedagogy.astro";
+
+import StudentEnrichment from "../components/academics/StudentEnrichment.astro";
+
+import academic1 from "../image/academics/elementary.jpeg";
+import academic2 from "../image/academics/primary.jpeg";
+import academic3 from "../image/academics/middle.jpeg";
+import academic4 from "../image/academics/senior.png";
+
+import circleScribble from "../fillers/circleScribble.png";
+
+import config from "../../config";
+import TopperCard from "../components/TopperCard.astro";
+import Card from "../components/academics/Card.astro";
+
+import gridBG from "../fillers/gridBG.svg";
+import { Image } from "astro:assets";
+import Achievements from "../components/Achievements.astro";
+
+const campusConfig = config.campus.find((c) => c.internalName === "kanakapura");
+
+const toppers = campusConfig?.toppers;
+---
+
+<Layout title="Academics | Best International K12 Primary Schools South bengalore Electronic City">
+  <div class="flex flex-col">
+    <TopNavigationBar />
+  </div>
+
+  <div
+    class="w-full h-[284px] max-md:h-[190px] flex flex-col items-center justify-center"
+    style={{
+      background: `url(${titleBG.src})`,
+    }}
+  >
+    <Text type="h2">
+      <span class="relative !text-black !not-italic">
+        <div class="w-[100px] absolute -top-4 -left-10 -z-[1]">
+          <Image
+            src={circleScribble}
+            alt="circle scribble"
+            class="w-full h-full"
+          />
+        </div>
+      </span> CAIE <span>Curriculum</span>
+    </Text>
+    <div class="p-2"></div>
+    <Text type="lg" class="text-center">
+      The Cambridge Advantage: Pioneering Learning for the Global Stage
+    </Text>
+  </div>
+
+  <Pedagogy
+    noLogo 
+    title={['Empowering ', 'Inquisitive Minds']}
+    description="Cambridge Assessment International Education prepares students for life, fostering an informed curiosity and a lasting passion for learning. As part of the University of Cambridge, we ensure our international qualifications are recognised by the world’s leading universities and employers, thereby offering students a vast array of options in their education and careers. We are committed to devoting our resources to deliver high-quality educational programs that unlock learners' potential."
+  />
+
+
+
+  <div
+    class="w-full bg-[#FFE3C1] border"
+    style={{
+      borderColor: "rgba(255, 111, 36, 0.48)",
+    }}
+  >
+    <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
+      <Card
+        image={academic1}
+        title={["Cambridge", "Primary"]}
+        layout="left"
+        bodyContent="Cambridge Primary offers a robust start for 5 to 11-year-olds, building a strong academic foundation in English, Math, and Science. It's tailored to fit every learning environment, fostering a well-rounded education and preparing children for the next educational step with clear goals and essential skills development. The combination of the subjects available are:"
+        bulletPoints={[
+          "Cambridge Primary Art and Design (0067)",
+          "Cambridge Primary Digital Literacy (0072)",
+          "Cambridge Primary English (0844)",
+          "Cambridge Primary Global Perspectives (0838)",
+          "Cambridge Primary Mathematics (0845)",
+          "Cambridge Primary Music (0068)",
+          "Cambridge Primary Physical Education (0069)",
+          "Cambridge Primary Science (0846)",
+        ]}
+      />
+      <div class="p-[60px] max-md:p-[10px]"></div>
+      <Card
+        image={academic2}
+        title={["Cambridge ", "Lower Secondary"]}
+        layout="right"
+        bodyContent=" Cambridge Lower Secondary caters to 11 to 14-year-olds, setting the stage for future academic success. It offers a diverse curriculum with subjects like English, Math, and Science, aimed at nurturing creativity and overall wellbeing. This stage ensures a smooth transition to higher education, shaping confident and well-prepared learners. Subjects offered are:"
+        bulletPoints={[
+          "Cambridge Lower Secondary Art & Design (0073)",
+          "Cambridge Lower Secondary Digital Literacy (0082)",
+          "Cambridge Lower Secondary English (1111/0861)",
+          "Cambridge Lower Secondary Global Perspectives (1129)",
+          "Cambridge Lower Secondary Mathematics (1112/0862)",
+          "Cambridge Lower Secondary Music (0078)",
+          "Cambridge Lower Secondary Physical Education (0081)",
+          "Cambridge Lower Secondary Science (1113/0893)",
+        ]}
+      />
+    </Section>
+  </div>
+  <div class="w-full bg-white">
+    <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
+      <Card
+        image={academic3}
+        title={["IGCSE"]}
+        layout="left"
+        border
+        bodyContent="Cambridge IGCSE provides a flexible program with over 70 subjects, including 30 languages, tailored to various abilities and needs. It emphasises core subjects, creative thinking, and problem-solving, preparing students excellently for advanced studies. Cambridge IGCSE develops a learner’s knowledge, understanding and skills in:"
+        bulletPoints={[
+          "Subject content",
+          "Applying knowledge and understanding to new as well as familiar situations",
+          "Intellectual enquiry",
+          "Flexibility and responsiveness to change",
+          "Working and communicating in English",
+          "Influencing outcomes",
+          "Cultural awareness",
+        ]}
+      />
+      <div class="p-[60px] max-md:p-[10px]"></div>
+      <Card
+        image={academic4}
+        title={["A ", "Level"]}
+        layout="right"
+        border
+        bodyContent="Cambridge International offers flexible A Level programs where students pick from 55 subjects to tailor their education. They can focus on one area or mix subjects over two years, with a one-year AS Level option available. This approach prepares students for university, and is globally recognised. Cambridge International AS & A Level is beneficial for:"
+        bulletPoints={[
+          "Deep subject knowledge",
+          "Independent and logical thinking",
+          "Application of knowledge to various situations",
+          "Analysis and evaluation of information",
+          "Constructing coherent arguments and making decisions",
+          "Clear communication of explanations, implications, and judgements in English",
+        ]}
+      />
+    </Section>
+  </div>
+
+  <!-- <Achievements /> -->
+
+  <p class="pb-14 max-md:pb-1" />
+
+  <GoToCta />
+  <Footer />
+</Layout>
+
+<style>
+  .float {
+    position: fixed;
+    /* background-color:#25d366; */
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px #999; */
+    z-index: 100;
+  }
+
+  .float > div {
+    opacity: 0;
+    transition: 0.6s all ease-in-out;
+  }
+  .float a:hover ~ div {
+    opacity: 1;
+  }
+
+  .my-float {
+    margin-top: 16px;
+  }
+</style>

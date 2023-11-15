@@ -4,7 +4,7 @@ import Text from "./system/Text.astro";
 import logo from "../images/logo2.png";
 import config from "../../config";
 import emailIconWhite from '../icons/EmailWhite.svg'
-import phoneIconWhite from '../icons/PhoneWhite.svg'
+import phoneIconWhite from '../icons/Phone.svg'
 import ExternalIcon from "./icons/ExternalIcon.astro";
 import { Image } from "astro:assets";
 
@@ -24,14 +24,23 @@ const menu: Array<Menu> = [
   {
     title: "About Us",
     link: "/about-us",
+    submenu: [
+      { title: 'Our Mission & Vision', link: '/about-us#mission' },
+      { title: 'Our Philosophy', link: '/about-us#philosophy' },
+      { title: 'Inquiry based learning', link: '/about-us#inquirybasedlearning' },
+      { title: 'Quality Policy', link: '/about-us#policy' },
+      { title: 'Our Management', link: '/about-us#management' },
+      { title: 'Advisory board', link: '/about-us#board' },
+      { title: 'Connect with Ekam', link: '/about-us#connect' }
+    ]
   },
   {
     title: "Academics",
     link: "/academics",
     submenu: [
       { title: 'Curriculum', link: '/academics' },
-      { title: 'Clubs', link: '/clubs' },
-      // { title: 'Co-scholastics', link: '/coscholastics' }
+      // { title: 'Clubs', link: '/clubs' },
+      { title: 'Co-scholastics', link: '/coscholastics' }
     ]
   },
   {
@@ -77,21 +86,33 @@ const ctaButtons: Array<{
 
 const activePath = Astro.url.pathname;
 ---
-<div class="fixed z-[999]">
-  <div class="py-2 w-full max-md:px-2 bg-primary px-12 text-white flex flex-row items-center justify-between max-md:flex-col max-md:gap-3">
-<div class="flex flex-row justify-center max-md:w-full gap-6">
-    <Text type="sm" class="font-bold max-md:text-[15px] max-md:hidden">Admissions Open</Text>
-<div class='max-md:flex hidden flex-row items-center h-full'>
+<div class="fixed z-[999] bg-white">
+  <div class="py-2 max-md:pt-2 max-md:pb-0 w-full max-md:px-2 transition-all bg-primary max-md:bg-white menu-bar max-md:[&.active]:bg-[#fff6ea] px-12 text-white flex flex-row items-center justify-between max-md:flex-col max-md:gap-3">
+    <div class="flex flex-row justify-between max-md:px-4 max-md:py-1 max-md:w-full gap-6">
+      
+      <Text type="sm" class="font-bold max-md:text-[15px] max-md:hidden">Admissions Open</Text>
+      <div class='max-md:flex hidden flex-row items-center h-full'>
         <div class='w-4'>
           <Image src={phoneIconWhite} alt="Phone Icon" class="w-full h-full">
         </div>
-        <div class="flex flex-row">
+        <div class="flex flex-row max-md:text-primary">
           <a target='_blank' href='tel:+919900077180' class="hover:underline font-bold"><Text type={'regular'} class='ml-2 max-md:text-[15px]'>+91 9900077180 </Text></a>
           /
           <a target='_blank' href='tel:+919900077181' class="hover:underline font-bold"><Text type={'regular'} class='max-md:text-[15px]'>81</Text></a>
         </div>
       </div>
-</div>
+
+      <div class="max-md:block hidden">
+        <form autocomplete="off">
+          <div id="menuToggle">
+            <input class="menu-checkbox" type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="flex flex-row items-center h-full gap-8 max-md:gap-3 max-md:hidden">
       <div class='flex flex-row items-center h-full'>
         <div class='w-6 max-md:w-5'>
@@ -120,17 +141,7 @@ const activePath = Astro.url.pathname;
     }}
     >
     <div class="flex flex-row items-center">    
-      <div class="max-md:block hidden">
-        <form autocomplete="off">
-          <div id="menuToggle">
-            <input class="menu-checkbox" type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </form>
-      </div>
-      <a href="/" class="relative z-10 daisy daisy-fixed daisy-1 w-[230px] max-sm:w-[88%] max-md:pl-4">
+      <a href="/" class="relative z-10 daisy daisy-fixed daisy-1 w-[195px] max-sm:w-[80%] max-sm:max-w-[260px] max-md:pl-4">
         <img src={logo.src} alt="Ekam's Logo"  />
       </a>
     </div>
@@ -235,7 +246,7 @@ const activePath = Astro.url.pathname;
               href={item.link}
               class={`${item.menu} ${item?.className}`}
             >
-              <Button class="font-sans relative z-10" buttonClass="max-md:px-4 max-md:py-3" textClass="max-md:!text-sm" type={item.type} icon={item?.icon}>
+              <Button iconClass="max-md:hidden" class="font-sans relative z-10" buttonClass="max-md:px-3 max-md:py-2" textClass="max-md:!text-sm" type={item.type} icon={item?.icon}>
                 {item.title}
               </Button>
             </a>
@@ -351,6 +362,8 @@ const activePath = Astro.url.pathname;
     position: relative;
 
     z-index: 1;
+    position: relative;
+    top: 4px;
 
     -webkit-user-select: none;
     user-select: none;
@@ -382,7 +395,7 @@ const activePath = Astro.url.pathname;
     margin-bottom: 5px;
     position: relative;
 
-    background: #111;
+    background: #FF6F24;
     border-radius: 3px;
 
     z-index: 1;
@@ -501,7 +514,10 @@ const activePath = Astro.url.pathname;
   const mobileMenu = document.querySelector(".mobileMenu") as HTMLDivElement;
 
   menuToggle.addEventListener("click", () => {
+
     mobileMenu.classList.toggle("visible");
+
+    document.querySelector('.menu-bar').classList.toggle('active')
   });
   const mobileMenuParents = document.querySelectorAll(
     ".mobileMenuParent"

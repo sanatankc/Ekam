@@ -9,6 +9,13 @@ import Scribble from "../Scribble.astro";
 import gridBG from "../../fillers/gridBG.svg";
 
 import Affiliations from "../Affiliations.astro";
+
+const { 
+  noLogo = false,
+  title = ['Aspiring ', 'for Excellence'],
+  description = "Ekam's educational philosophy, shaped by MDN Edify Education, centers on Inquiry-Based Learning, nurturing progressive thinking and curiosity. Our 3C policy emphasizes character, competence, and content, offering interactive and integrated learning experiences. Our pedagogical approach prioritizes student-centered learning, incorporating diverse teaching strategies like QAXP and RAFT."
+} = Astro.props
+
 ---
 
 <Section>
@@ -18,41 +25,17 @@ import Affiliations from "../Affiliations.astro";
     <div class="max-md:order-2">
       <Sal preset="slide-up" d="100" t="400">
         <Text type="h2">
-          Aspiring <span class="relative"> for Excellence</span>
+          {title[0]} <span class="relative"> {title[1]}</span>
         </Text>
       </Sal>
       <div class="p-2"></div>
-      <!-- <Sal preset="slide-up" d="200" t="400">
-        <Text type="lg">
-          Our Philosophy: Empowering Through <span class="text-primary">Inquiry</span>
-        </Text>
-      </Sal> -->
       <div class="p-3 max-md:p-2"></div>
       <Sal preset="slide-up" d="300" t="400">
         <Text type="base">
-          Ekam's educational philosophy, shaped by MDN Edify Education, centers
-          on Inquiry-Based Learning, nurturing progressive thinking and
-          curiosity. Our 3C policy emphasizes character, competence, and
-          content, offering interactive and integrated learning experiences. Our
-          pedagogical approach prioritizes student-centered learning,
-          incorporating diverse teaching strategies like QAXP and RAFT.
-          <!-- We have built a dynamic learning space that thrives on curiosity and
-          adventure! Guided by <br />
-          <span class="text-primary">MDN Edify Education</span>
-           , our approach cultivates imaginative thinkers poised to make a
-          positive impact on the world. We are inspired by global educators and
-          diverse methods, ensuring your child's education is as thrilling as it
-          is enriching! -->
+          {description}
         </Text>
       </Sal>
       <div class="p-3"></div>
-      <!-- <Sal preset="slide-up" d="400" t="400">
-        <div class="flex flex-row gap-6 items-center">
-          <Button type="primary" className="justify-start">
-            Read more about us
-          </Button>
-        </div>
-      </Sal> -->
     </div>
     <Sal preset="fade" d="400" t="400" class="flex-shrink-0">
       <Image
@@ -69,5 +52,7 @@ import Affiliations from "../Affiliations.astro";
   </div>
 
   <div class="pt-6"></div>
-  <Affiliations />
+  {!noLogo && (
+    <Affiliations />
+  )}
 </Section>

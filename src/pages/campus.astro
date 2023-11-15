@@ -198,7 +198,28 @@ const toppers = campusConfig?.toppers;
           id="deck-science-labs"
         />
       </div>
-      <div class="flex flex-row max-md:flex-col w-full gap-20 justify-between">
+      <div class="flex flex-row-reverse max-md:flex-col w-full gap-20 justify-between">
+        <div class="max-md:order-2">
+          <Text type="h3">
+            <span class="text-primary">Healthcare </span> Facilities
+          </Text>
+          <div class="p-2"></div>
+          <Text type="base" class="w-[90%]">
+            Our school is committed to the well-being of our students, providing a comprehensive health care facility staffed with qualified medical personnel. On-site medical services are available during school hours, equipped to handle immediate health concerns and routine check-ups. We ensure a healthy school environment with regular health awareness programs and workshops. In addition, emergency protocols are in place to address any urgent medical situations swiftly and efficiently.
+          </Text>
+          <!-- <div class="p-3"></div>
+          <Text
+            type="sm"
+            class="uppercase text-primary underline tracking-widest font-semibold cursor-pointer"
+            data-modal-target="science-labs"
+            data-target-deck="deck-science-labs"
+          >
+            View Labs
+          </Text> -->
+        </div>
+        <Image src={campus6} class="w-[380px] h-[260px]" alt="ALt text" />
+      </div>
+      <div class="flex flex-row-reverse max-md:flex-col w-full gap-20 justify-between">
         <DeckCard
           class="relative left-2 max-md:-left-2"
           images={[

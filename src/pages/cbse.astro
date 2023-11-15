@@ -46,7 +46,7 @@ const toppers = campusConfig?.toppers;
   >
     <Text type="h2">
       <span class="relative !text-black !not-italic">
-        Our
+        CBSE 
         <div class="w-[100px] absolute -top-4 -left-10 -z-[1]">
           <Image
             src={circleScribble}
@@ -54,7 +54,7 @@ const toppers = campusConfig?.toppers;
             class="w-full h-full"
           />
         </div>
-      </span> Academic <span>Programs</span>
+      </span> <span>Curriculum</span>
     </Text>
     <div class="p-2"></div>
     <Text type="lg" class="text-center">
@@ -63,7 +63,7 @@ const toppers = campusConfig?.toppers;
     </Text>
   </div>
 
-  <Pedagogy />
+  <Pedagogy noLogo />
 
   <Section class="pt-0 relative overflow-hidden max-md:!px-0">
     <div class="relative z-10 flex flex-col items-center">
@@ -80,7 +80,7 @@ const toppers = campusConfig?.toppers;
         <div class="pt-4"></div>
       </div>
       <div
-        class="w-[1100px] max-md:w-full max-md:h-[450px] h-[537px] flex flex-col mt-8"
+        class="w-[1150px] max-md:w-full max-md:h-[450px] h-[537px] flex flex-col mt-8"
       >
         <div class="flex flex-row flex-1 border-b border-black/20">
           <div
@@ -102,18 +102,18 @@ const toppers = campusConfig?.toppers;
           <div
             class="flex-1 flex px-1 items-center justify-center flex-col border-r border-black/20"
           >
-            <Text
-              type="h2"
-              class="max-md:!text-[17px] max-md:text-center text-[32px] text-black flex items-start"
-            >
-              CBSE
-            </Text>
-            <Text
+          <Text
+          type="h2"
+          class="max-md:!text-[17px] max-md:text-center text-[32px] text-[#6F322E]"
+        >
+          NEP Policy <br class="hidden max-md:block" />
+          <Text
               type="sm"
               class="max-md:mt-1 mt-3 max-md:!text-[13px] font-semibold text-center text-[19px]"
             >
-              K.G - Grade XII
+            2020
             </Text>
+        </Text>
           </div>
           <div class="flex-1 flex px-1 items-center justify-center flex-col">
             <Text
@@ -150,11 +150,19 @@ const toppers = campusConfig?.toppers;
           <div
             class="flex-1 flex px-1 items-center justify-center flex-col border-r border-black/20"
           >
+            
+
             <Text
               type="h2"
-              class="max-md:!text-[17px] max-md:text-center text-[32px] text-primary"
+              class="max-md:!text-[17px] max-md:text-center text-[32px] text-black text-primary flex items-start"
             >
-              NEP Policy <br class="hidden max-md:block" /> 2020
+              CBSE
+            </Text>
+            <Text
+              type="sm"
+              class="max-md:mt-1 mt-3 max-md:!text-[13px] font-semibold text-center text-[19px]"
+            >
+              K.G - Grade XII
             </Text>
             <!-- <Text type='base' class='mt-1 font-semibold text-center'>
             </Text> -->
@@ -198,22 +206,7 @@ const toppers = campusConfig?.toppers;
           >
             <Text
               type="h2"
-              class="max-md:!text-[17px] max-md:text-center text-[32px] text-black"
-            >
-              Cambridge (CIE)
-            </Text>
-            <Text
-              type="sm"
-              class="max-md:mt-1 mt-3 max-md:!text-[13px] font-semibold text-center text-[19px]"
-            >
-              UKG - IGCSE
-            </Text>
-          </div>
-
-          <div class="flex-1 flex px-1 items-center justify-center flex-col">
-            <Text
-              type="h2"
-              class="max-md:!text-[17px] max-md:text-center text-[32px] text-black flex flex-row items-start"
+              class="max-md:!text-[17px] max-md:text-center text-[32px] text-[#6F322E]"
             >
               Secondary Years
             </Text>
@@ -221,7 +214,22 @@ const toppers = campusConfig?.toppers;
               type="sm"
               class="max-md:mt-1 mt-3 max-md:!text-[13px] font-semibold text-center text-[19px]"
             >
-              Grade IX - XII
+              Grades IX - X
+            </Text>
+          </div>
+
+          <div class="flex-1 flex px-1 items-center justify-center flex-col">
+            <Text
+              type="h2"
+              class="max-md:!text-[17px] max-md:text-center text-[32px] text-black flex flex-row items-start"
+            > 
+              Senior Secondary Years
+            </Text>
+            <Text
+              type="sm"
+              class="max-md:mt-1 mt-3 max-md:!text-[13px] font-semibold text-center text-[19px]"
+            >
+              Grades XI - XII
             </Text>
           </div>
         </div>
@@ -295,10 +303,6 @@ const toppers = campusConfig?.toppers;
         ]}
       />
     </Section>
-  </div>
-
-  <div id="studentenrichment">
-    <StudentEnrichment />
   </div>
 
   <!-- <Achievements /> -->

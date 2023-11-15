@@ -1,0 +1,177 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import TopNavigationBar from "../components/TopNavigationBar.astro";
+
+import titleBG from "../images/titleBG.png";
+import "../global.css";
+import Footer from "../components/landingPage/Footer.astro";
+import Text from "../components/system/Text.astro";
+import Section from "../components/system/Section.astro";
+import GoToCta from "../components/GoToCta.astro";
+import Pedagogy from "../components/academics/pedagogy.astro";
+
+import StudentEnrichment from "../components/academics/StudentEnrichment.astro";
+
+import academic1 from "../image/academics/elementary.jpeg";
+import academic2 from "../image/academics/primary.jpeg";
+import academic3 from "../image/academics/middle.jpeg";
+import academic4 from "../image/academics/senior.png";
+import stem1 from "../image/academics/stem1.png";
+import stem2 from "../image/academics/stem2.png";
+
+import circleScribble from "../fillers/circleScribble.png";
+
+import config from "../../config";
+import TopperCard from "../components/TopperCard.astro";
+import Card from "../components/academics/Card.astro";
+
+import gridBG from "../fillers/gridBG.svg";
+import { Image } from "astro:assets";
+import Achievements from "../components/Achievements.astro";
+
+const campusConfig = config.campus.find((c) => c.internalName === "kanakapura");
+
+const toppers = campusConfig?.toppers;
+---
+
+<Layout title="Academics | Best International K12 Primary Schools South bengalore Electronic City">
+  <div class="flex flex-col">
+    <TopNavigationBar />
+  </div>
+
+  <div
+    class="w-full h-[284px] max-md:h-[190px] flex flex-col items-center justify-center"
+    style={{
+      background: `url(${titleBG.src})`,
+    }}
+  >
+    <Text type="h2">
+      <span class="relative !text-black !not-italic">
+        <div class="w-[100px] absolute -top-4 -left-10 -z-[1]">
+          <Image
+            src={circleScribble}
+            alt="circle scribble"
+            class="w-full h-full"
+          />
+        </div>
+      </span>  Stem  <span>Integration At Ekam</span>
+    </Text>
+    <div class="p-2"></div>
+    <Text type="lg" class="text-center">
+      Igniting Curiosity, Building Futures Through Innovation
+    </Text>
+  </div>
+
+
+
+  <div
+    class="w-full bg-[#FFE3C1] border"
+    style={{
+      borderColor: "rgba(255, 111, 36, 0.48)",
+    }}
+  >
+    <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
+      <Card
+        image={academic1}
+        title={["What is ", "STEM Education?"]}
+        layout="left"
+        bodyContent="Our school is excited to announce the integration of a STEM-focused curriculum starting from the 2023-24 academic year. STEM education merges Science, Technology, Engineering, and Mathematics to nurture creativity and enhance critical and logical thinking. It encourages students to apply classroom concepts to real-world challenges actively. Through STEM Project Based Learning (PBL), students will tackle actual problems hands-on, fostering practical solutions and deeper understanding. Additionally, we aim to incorporate Technical Vocational Education and Training (TVET) to bolster skill development and empower self-employment, details of which will be highlighted in our career-focused discussions during the implementation phase."
+        bulletPoints={[
+        ]}
+      />
+      <div class="p-[60px] max-md:p-[10px]"></div>
+      <Card
+        image={academic2}
+        title={["Goals & Objectives ", "of STEM Education"]}
+        layout="right"
+        bodyContent="STEM education is about lighting the spark of curiosity and guiding students to build a future where they're empowered with knowledge and innovation."
+        bulletPoints={[
+          "Goal #1: Applying Science and Math in Real Life STEM encourages kids to use real-world data and tools from science, tech, engineering, and math to understand the world and solve problems.",
+          "Goal #2: Best Practices in Action Our aim is for students to not just learn but apply the best methods from all STEM fields, building a strong foundation for their future.",
+          "Goal #3: Learn and Innovate We want students to soak up knowledge in STEM and use their creativity to invent and imagine new things.",
+        ]}
+      />
+    </Section>
+  </div>
+  <div class="w-full bg-white">
+    <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
+      <Card
+        image={academic3}
+        title={["Benefits of", "STEM Education"]}
+        layout="left"
+        border
+        bodyContent="STEM education equips children with vital skills for the future, ensuring they are ready to excel in a modern, global workplace."
+        bulletPoints={[
+          "Skill Enhancement: STEM nurtures crucial skills like creativity, analytical thinking, collaboration, and innovation, preparing students for a rapidly changing world.",
+          "Global Opportunities: A STEM-based education is internationally recognized, opening up job opportunities worldwide due to its focus on current global standards.",
+          "Competitive Advantage: STEM students often stand out in the job market, offering advanced skill sets that may lead to better job positions and salaries compared to peers with traditional education backgrounds.",
+          "Encouraging Innovation: By blending theory with hands-on learning, STEM education drives students towards the pinnacle of learning—innovation and invention.",
+          "Leadership Development: STEM challenges students to tackle problems head-on, cultivating leadership qualities as they learn to see challenges as growth opportunities.",
+        ]}
+      />
+    </Section>
+  </div>
+  <div class="w-full bg-white">
+    <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
+      <Card
+        image={academic4}
+        title={["Components of ", "STEM Education"]}
+        layout="right"
+        border
+        bodyContent="Our innovative educational approach equips students with the skills to tackle real-world challenges and thrive in a complex future. Here’s a snapshot:"
+        bulletPoints={[
+          "Real-World Problem-Solving: Students gather and analyze information to creatively solve actual problems, using science, math, and technology.",
+          "Deep Learning: Instead of rote memorization, students are encouraged to critically examine their beliefs and understand the depths of their lessons.",
+          "Practical Skills for Today: Through project-based activities and real-world experiences, students develop essential life and career skills like teamwork, communication, and creativity.",
+          "Tailored Education: Students learn in a way that best suits them, choosing their learning pace and subjects, making education a personal journey.",
+          "Community Engagement: Learning extends beyond the classroom to include respect, acceptance, and understanding, fostering a sense of belonging and empathy.",
+          "Local and Global Awareness: Students use their local community as a learning resource, broadening their view and tackling issues that impact their world directly.",
+        ]}
+      />
+    </Section>
+  </div>
+
+  <Section>
+    <Text type="h2">
+       Stem  <span>Challange</span>
+    </Text>
+
+    <div class="flex flex-row max-md:flex-col w-full justify-between mt-6">
+      <Image src={stem1} alt="Stem Challange #1" width={800} class=" w-[49%] max-md:w-full" />
+      <Image src={stem2} alt="Stem Challange #2" width={800} class=" w-[49%] max-md:w-full" />
+    </div>
+  </Section>
+
+  <!-- <Achievements /> -->
+
+  <p class="pb-14 max-md:pb-1" />
+
+  <GoToCta />
+  <Footer />
+</Layout>
+
+<style>
+  .float {
+    position: fixed;
+    /* background-color:#25d366; */
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px #999; */
+    z-index: 100;
+  }
+
+  .float > div {
+    opacity: 0;
+    transition: 0.6s all ease-in-out;
+  }
+  .float a:hover ~ div {
+    opacity: 1;
+  }
+
+  .my-float {
+    margin-top: 16px;
+  }
+</style>
