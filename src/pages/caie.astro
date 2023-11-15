@@ -14,6 +14,10 @@ import Pedagogy from "../components/academics/pedagogy.astro";
 import StudentEnrichment from "../components/academics/StudentEnrichment.astro";
 
 import academic1 from "../image/academics/elementary.jpeg";
+import camprimary from "../image/academics/camprimary.png";
+import camsecondary from "../image/academics/camsecondary.png";
+import camsecondary2 from "../image/academics/camsecondary2.png";
+import camalevel from "../image/academics/camalevel.png";
 import academic2 from "../image/academics/primary.jpeg";
 import academic3 from "../image/academics/middle.jpeg";
 import academic4 from "../image/academics/senior.png";
@@ -77,7 +81,7 @@ const toppers = campusConfig?.toppers;
   >
     <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
       <Card
-        image={academic1}
+        image={camprimary}
         title={["Cambridge", "Primary"]}
         layout="left"
         bodyContent="Cambridge Primary offers a robust start for 5 to 11-year-olds, building a strong academic foundation in English, Math, and Science. It's tailored to fit every learning environment, fostering a well-rounded education and preparing children for the next educational step with clear goals and essential skills development. The combination of the subjects available are:"
@@ -94,7 +98,7 @@ const toppers = campusConfig?.toppers;
       />
       <div class="p-[60px] max-md:p-[10px]"></div>
       <Card
-        image={academic2}
+        image={camsecondary2}
         title={["Cambridge ", "Lower Secondary"]}
         layout="right"
         bodyContent=" Cambridge Lower Secondary caters to 11 to 14-year-olds, setting the stage for future academic success. It offers a diverse curriculum with subjects like English, Math, and Science, aimed at nurturing creativity and overall wellbeing. This stage ensures a smooth transition to higher education, shaping confident and well-prepared learners. Subjects offered are:"
@@ -114,7 +118,7 @@ const toppers = campusConfig?.toppers;
   <div class="w-full bg-white">
     <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
       <Card
-        image={academic3}
+        image={camsecondary}
         title={["IGCSE"]}
         layout="left"
         border
@@ -131,7 +135,7 @@ const toppers = campusConfig?.toppers;
       />
       <div class="p-[60px] max-md:p-[10px]"></div>
       <Card
-        image={academic4}
+        image={camalevel}
         title={["A ", "Level"]}
         layout="right"
         border

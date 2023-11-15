@@ -1,0 +1,59 @@
+---
+import whyChooseEdify from "../../images/whyChooseEdify.png";
+import Button from "../system/Button.astro";
+import { Image } from "astro:assets";
+import Text from "../system/Text.astro";
+import Sal from "../system/Sal.astro";
+import Section from "../system/Section.astro";
+import Scribble from "../Scribble.astro";
+import gridBG from "../../fillers/gridBG.svg"
+import Affiliations from "../Affiliations.astro";
+import academics1 from "../../image/homepage/1.jpeg";
+---
+
+<Section class="flex flex-row  pr-[40px] gap-[72px] max-md:gap-[30px] max-md:flex-col items-center relative">
+  <div class="max-md:order-2">
+    <Sal preset="slide-up" d="100" t="400">
+      <Text type="h2">
+        Our Co-Scholastics 
+        <span class="relative">
+          Offerings
+          <Scribble />
+        </span>
+      </Text>
+    </Sal>
+    <div class="p-2"></div>
+    <Sal preset="slide-up" d="200" t="400">
+      <Text type="lg">
+        Learnings <span class="text-black">Beyond the classroom</span>
+      </Text>
+    </Sal>
+    <div class="p-3 max-md:p-2"></div>
+    <Sal preset="slide-up" d="300" t="400">
+      <Text type="base">
+        Beyond the classrooms, we ignite passions with our Sports Education Program, vibrant Arts curriculum, and practical Life Skills training. Through interactive workshops, we elevate the learning adventure, ensuring our students excel in both academics and personal growth!
+      
+      </Text>
+    </Sal>
+    <div class="p-3"></div>
+    <Sal preset="slide-up" d="400" t="400">
+      <div class="flex flex-row gap-6 items-center">
+        <a href="/coscholastics">
+          <Button className="justify-start">
+            Discover Co-Scholastics
+          </Button>
+        </a>
+      </div>
+    </Sal>
+  </div>
+  <Sal preset="fade" d="400" t="400" class="flex-shrink-0">
+    <Image
+      class="w-[384px] max-md:w-[210px] border-[10px] border-[#FFC784]/60"
+      src={academics1}
+      alt="Why choose Ekam??"
+  </Sal>
+  <div class="w-[1016px] h-[650px] max-[1030px]:w-full absolute -left-[50px] top-[280px] -z-[1]">
+    <img src={gridBG.src} class="w-full h-full" />
+  </div>
+</Section>
+<!-- <div class="pt-8" /> -->
