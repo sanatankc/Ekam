@@ -23,7 +23,7 @@ const menu: Array<Menu> = [
   },
   {
     title: "About Us",
-    link: "/about-us",
+    // link: "/about-us",
     submenu: [
       { title: 'Our Mission & Vision', link: '/about-us#mission' },
       { title: 'Our Philosophy', link: '/about-us#philosophy' },
@@ -36,7 +36,7 @@ const menu: Array<Menu> = [
   },
   {
     title: "Academics",
-    link: "/academics",
+    // link: "/academics",
     submenu: [
       { title: 'CBSE Curriculum', link: '/cbse' },
       { title: 'CAIE Curriculum', link: '/caie' },
@@ -92,6 +92,14 @@ const ctaButtons: Array<{
 ];
 
 const activePath = Astro.url.pathname;
+
+const removeHash = url => {
+  const hashIndex = url.indexOf('#')
+  if (hashIndex === -1) return url
+  return url.slice(0, hashIndex)
+}
+
+console.log('activePath --> ', Astro.url)
 ---
 <div class="fixed z-[999] bg-white">
   <div class="py-2 max-md:pt-2 max-md:pb-0 w-full max-md:px-2 transition-all bg-primary max-md:bg-white menu-bar max-md:[&.active]:bg-[#fff6ea] px-12 text-white flex flex-row items-center justify-between max-md:flex-col max-md:gap-3">
@@ -171,13 +179,17 @@ const activePath = Astro.url.pathname;
                       href={item.link}
                       class:list={[
                         "text-black font-semibold hover:underline font-sans",
-                        (item.link === activePath || item.submenu.map(({ link }) => link).includes(activePath)) && "!text-primary",
+                        (item.link === activePath || item.submenu.map(({ link }) => removeHash(link)).includes(activePath)) && "!text-primary",
                       ]}
                     >
                       {item.title}
                     </a>
                   ) : (
-                    <span class="text-black font-semibold hover:underline font-sans">
+                    <span 
+                      class:list={["text-black font-semibold hover:underline font-sans",
+                      (item.link === activePath || item.submenu.map(({ link }) => removeHash(link)).includes(activePath)) && "!text-primary",
+                    ]}
+                    >
                       {item.title}
                     </span>
                   )}
@@ -192,7 +204,7 @@ const activePath = Astro.url.pathname;
                         clip-rule="evenodd"
                         d="M5.94524 9.20954C6.16089 8.95794 6.53967 8.9288 6.79127 9.14446L12.0008 13.6098L17.2103 9.14446C17.4619 8.9288 17.8407 8.95794 18.0563 9.20954C18.272 9.46113 18.2429 9.83991 17.9913 10.0556L12.3913 14.8556C12.1666 15.0482 11.835 15.0482 11.6103 14.8556L6.01032 10.0556C5.75872 9.83991 5.72958 9.46113 5.94524 9.20954Z"
                         class={
-                          (item.link === activePath || item.submenu.map(({ link }) => link).includes(activePath)) ? "fill-primary" : "fill-black"
+                          (item.link === activePath || item.submenu.map(({ link }) => removeHash(link)).includes(activePath)) ? "fill-primary" : "fill-black"
                         }
                       />
                     </svg>

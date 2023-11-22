@@ -97,6 +97,7 @@ import literary from "../image/clubs/literary.jpeg";
 import visarts from "../image/clubs/art.jpeg";
 import cuisine from "../image/clubs/cuisine.png";
 import perfarts from "../image/clubs/dance.jpeg";
+import interactClub from "../image/academics/interactClub.webp";
 
 import clubsBG from "../image/clubs/bg.jpeg";
 import StudentEnrichment from "../components/academics/StudentEnrichment.astro";
@@ -160,7 +161,7 @@ const clubs = [
     title: ["Interact", "Club"],
     description:
       "The Interact Club, is the youth wing of the Rotary Club, and has associated with our school to give our residential students a platform to develop their leadership skills and foster a sense of social responsibility. Through the club, our students make an effort to reach out to the underprivileged and strive to make a tangible difference in their lives.",
-    thumbnail: cuisine,
+    thumbnail: interactClub,
   },
 ];
 ---
@@ -215,30 +216,38 @@ const clubs = [
       class="flex flex-row flex-wrap gap-5 mt-6 justify-center items-center"
     >
       {
-        clubs.map((club) => (
+        clubs.map((club, i) => (
           <div
             style={{
               background: "linear-gradient(0deg, #FFF7F2 -2.33%, #FFF 29.76%)",
               backdropFilter: "blur(16px)",
               borderRadius: "24px",
             }}
-            class="p-4 w-[400px] min-h-[530px] border-[#B8B8B8]/60 border"
+            class:list={[
+              "p-4 min-w-[400px] flex-1 min-h-[530px] border-[#B8B8B8]/60 border max-md:min-w-full",
+              i === clubs.length - 1 && "flex flex-row min-h-[auto] gap-4 max-md:block max-md:min-h-[530px]"
+            ]}
           >
             <div
-              class="w-full h-[320px] bg-cover bg-center rounded-2xl"
+              class:list={[
+                "w-full h-[320px] bg-cover bg-center rounded-2xl",
+                i === clubs.length - 1 && "!h-[200px] max-md:!h-[320px]"
+              ]}
               style={{
                 backgroundImage: `url(${club.thumbnail.src})`,
               }}
             />
-            <Text type="h4" class="mt-4">
-              <span class="text-primary">{club.title[0]}</span>{" "}
-              <span>{club.title[1]}</span>
-            </Text>
-            <Text
-              type="sm"
-              class="mt-2 [&>span]:text-primary [&>span]:font-bold"
-              set:html={club.description}
-            />
+            <div>
+              <Text type="h4" class="mt-4">
+                <span class="text-primary">{club.title[0]}</span>{" "}
+                <span>{club.title[1]}</span>
+              </Text>
+              <Text
+                type="sm"
+                class="mt-2 [&>span]:text-primary [&>span]:font-bold"
+                set:html={club.description}
+              />
+            </div>
           </div>
         ))
       }

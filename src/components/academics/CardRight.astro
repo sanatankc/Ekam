@@ -7,7 +7,8 @@ const {
   title,
   bodyContent,
   bulletPoints,
-  layout="left"
+  layout="left",
+  titleSingleLine=false
 } = Astro.props
 ---
 
@@ -21,8 +22,7 @@ const {
     layout === 'right' ? "left-[43px]" : "-left-[43px]"
   ]}>
     <Text type="h2">
-      {title[0]}<br/>
-      <span class="!not-italic">{title[1]}</span>
+      {title[0]}{' '}<br class={titleSingleLine && "hidden"} /><span class="!not-italic">{title[1]}</span>
     </Text>
     <div class="p-4 max-md:p-1" />
     <Text type="regular">

@@ -13,7 +13,8 @@ import Affiliations from "../Affiliations.astro";
 const { 
   noLogo = false,
   title = ['Aspiring ', 'for Excellence'],
-  description = "Ekam's educational philosophy, shaped by MDN Edify Education, centers on Inquiry-Based Learning, nurturing progressive thinking and curiosity. Our 3C policy emphasizes character, competence, and content, offering interactive and integrated learning experiences. Our pedagogical approach prioritizes student-centered learning, incorporating diverse teaching strategies like QAXP and RAFT."
+  description = "Ekam's educational philosophy, shaped by MDN Edify Education, centers on Inquiry-Based Learning, nurturing progressive thinking and curiosity. Our 3C policy emphasizes character, competence, and content, offering interactive and integrated learning experiences. Our pedagogical approach prioritizes student-centered learning, incorporating diverse teaching strategies like QAXP and RAFT.",
+  image=kid
 } = Astro.props
 
 ---
@@ -40,7 +41,7 @@ const {
     <Sal preset="fade" d="400" t="400" class="flex-shrink-0">
       <Image
         class="w-[324px] max-md:w-[210px]"
-        src={kid}
+        src={image}
         alt="Why choose Ekam??"
       />
     </Sal>

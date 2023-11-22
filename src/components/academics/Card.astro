@@ -8,7 +8,9 @@ const {
   bodyContent,
   border,
   bulletPoints,
-  layout="left"
+  layout="left",
+  imagePosition,
+  titleSingleLine = false
 } = Astro.props;
 ---
 
@@ -18,13 +20,13 @@ const {
 ]}>
   {layout === "left" ? (
     <>
-      <CardLeft image={image} layout={layout} alt={title.join(' ')} border={border} />
-      <CardRight layout={layout} title={title} bodyContent={bodyContent} bulletPoints={bulletPoints} border={border} />
+      <CardLeft image={image} imagePosition={imagePosition} layout={layout} alt={title.join(' ')} border={border} />
+      <CardRight titleSingleLine layout={layout} title={title} bodyContent={bodyContent} bulletPoints={bulletPoints} border={border} />
     </>
   ): (
     <>
-      <CardRight layout={layout} title={title} bodyContent={bodyContent} bulletPoints={bulletPoints} border={border} />
-      <CardLeft layout={layout} image={image} layout={layout} alt={title.join(' ')} border={border} />
+      <CardRight titleSingleLine layout={layout} title={title} bodyContent={bodyContent} bulletPoints={bulletPoints} border={border} />
+      <CardLeft layout={layout} image={image} imagePosition={imagePosition} layout={layout} alt={title.join(' ')} border={border} />
     </>
   )}
 </div>

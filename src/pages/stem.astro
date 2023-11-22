@@ -13,13 +13,15 @@ import Pedagogy from "../components/academics/pedagogy.astro";
 
 import StudentEnrichment from "../components/academics/StudentEnrichment.astro";
 
-import stem from "../image/academics/stem.jpg";
+import stem from "../image/academics/stem.png";
+import stemBenefits from "../image/academics/stemBenefits.png";
 import stemnew2 from "../image/academics/stemnew2.jpg";
 import academic3 from "../image/academics/middle.jpeg";
 import academic4 from "../image/academics/senior.png";
 import stem1 from "../image/academics/stem1.png";
 import stem2 from "../image/academics/stem2.png";
-
+import stemGoals from "../image/academics/stemGoals.png";
+import stemComponents from "../image/academics/stemComponents.png";
 import circleScribble from "../fillers/circleScribble.png";
 
 import config from "../../config";
@@ -82,14 +84,14 @@ const toppers = campusConfig?.toppers;
       />
       <div class="p-[60px] max-md:p-[10px]"></div>
       <Card
-        image={stemnew2}
+        image={stemGoals}
         title={["Goals & Objectives ", "of STEM Education"]}
         layout="right"
         bodyContent="STEM education is about lighting the spark of curiosity and guiding students to build a future where they're empowered with knowledge and innovation."
         bulletPoints={[
-          "Goal #1: Applying Science and Math in Real Life: STEM encourages kids to use real-world data and tools from science, tech, engineering, and math to understand the world and solve problems.",
-          "Goal #2: Best Practices in Action: Our aim is for students to not just learn but apply the best methods from all STEM fields, building a strong foundation for their future.",
-          "Goal #3: Learn and Innovate: We want students to soak up knowledge in STEM and use their creativity to invent and imagine new things.",
+          "Applying Science and Math in Real Life: STEM encourages kids to use real-world data and tools from science, tech, engineering, and math to understand the world and solve problems.",
+          "Best Practices in Action: Our aim is for students to not just learn but apply the best methods from all STEM fields, building a strong foundation for their future.",
+          "Learn and Innovate: We want students to soak up knowledge in STEM and use their creativity to invent and imagine new things.",
         ]}
       />
     </Section>
@@ -97,7 +99,7 @@ const toppers = campusConfig?.toppers;
   <div class="w-full bg-white">
     <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
       <Card
-        image={academic3}
+        image={stemBenefits}
         title={["Benefits of", "STEM Education"]}
         layout="left"
         border
@@ -115,7 +117,7 @@ const toppers = campusConfig?.toppers;
   <div class="w-full bg-white">
     <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
       <Card
-        image={academic4}
+        image={stemComponents}
         title={["Components of ", "STEM Education"]}
         layout="right"
         border

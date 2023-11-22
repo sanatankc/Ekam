@@ -14,8 +14,11 @@ import Pedagogy from "../components/academics/pedagogy.astro";
 import StudentEnrichment from "../components/academics/StudentEnrichment.astro";
 
 import academic1 from "../image/academics/elementary.jpeg";
-import academic2 from "../image/academics/primary.jpeg";
+// import academic2 from "../image/academics/primary.jpeg";
+import academic2 from "../image/academics/academics2.jpeg";
 import academic3 from "../image/academics/middle.jpeg";
+import camAssesment from "../image/academics/camAssesment.jpeg";
+import assessingForProgress from "../image/academics/assessingForProgress.jpeg";
 import academic4 from "../image/academics/senior.png";
 
 import circleScribble from "../fillers/circleScribble.png";
@@ -71,7 +74,8 @@ const toppers = campusConfig?.toppers;
   >
     <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
       <Card
-        image={academic1}
+        titleSingleLine
+        image={assessingForProgress}
         title={["Assessing for ", "Progress"]}
         layout="left"
         bodyContent="Assessment at EKAM is a daily process that checks how well students grasp the intended material. Recognising that each student learns differently and at their own pace, we use various assessment methods. The outcomes of these assessments are vital as they help teachers make informed decisions and steer student learning effectively."
@@ -82,6 +86,7 @@ const toppers = campusConfig?.toppers;
       />
       <div class="p-[60px] max-md:p-[10px]"></div>
       <Card
+        titleSingleLine
         image={academic2}
         title={["Pathways ", "to Excellence"]}
         layout="right"
@@ -99,7 +104,8 @@ const toppers = campusConfig?.toppers;
   <div class="w-full bg-white">
     <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
       <Card
-        image={academic3}
+        titleSingleLine
+        image={camAssesment}
         title={["Cambridge", "Assessment"]}
         layout="left"
         border

@@ -11,28 +11,34 @@ import Affiliations from "../Affiliations.astro";
 import academics1 from "../../image/homepage/1.jpeg";
 ---
 
-<Section class="flex flex-row  pr-[40px] gap-[72px] max-md:gap-[30px] max-md:flex-col items-center relative">
-  <div class="max-md:order-2">
-    <Sal preset="slide-up" d="100" t="400">
-      <Text type="h2">
-        Our Co-Scholastics 
-        <span class="relative">
-          Offerings
-          <Scribble />
-        </span>
-      </Text>
-    </Sal>
-    <div class="p-2"></div>
+<Sal preset="slide-up" d="100" t="400">
+  <Text type="h2" class="text-center">
+    Our 
+    <span class="relative">
+      Co-Scholastics
+      <Scribble />
+    </span>
     <Sal preset="slide-up" d="200" t="400">
       <Text type="lg">
         Learnings <span class="text-black">Beyond the classroom</span>
       </Text>
     </Sal>
-    <div class="p-3 max-md:p-2"></div>
+  </Text>
+</Sal>
+<Section class="flex flex-row items-start  pr-[40px] gap-[72px] max-md:gap-[30px] max-md:flex-col relative">
+  <Sal preset="fade" d="400" t="400" class="flex-shrink-0">
+    <Image
+      class="h-[400px] w-[650px] max-md:h-auto max-md:w-[210px] object-cover border-[10px] border-[#FFC784]/60"
+      src={academics1}
+      alt="Why choose Ekam??"
+    />
+  </Sal>
+
+  <div class="max-md:order-2">
+  
     <Sal preset="slide-up" d="300" t="400">
       <Text type="base">
-        Beyond the classrooms, we ignite passions with our Sports Education Program, vibrant Arts curriculum, and practical Life Skills training. Through interactive workshops, we elevate the learning adventure, ensuring our students excel in both academics and personal growth!
-      
+        At EKAM, we believe in the holistic development of our students, extending learning beyond traditional academic boundaries. Our dynamic Sports Education Program not only focuses on physical fitness but also instills teamwork, resilience, and strategic thinking through a variety of sports and athletic activities. The vibrant Arts curriculum encourages creativity and self-expression, allowing students to explore and excel in music, visual arts, drama, and dance.
       </Text>
     </Sal>
     <div class="p-3"></div>
@@ -46,12 +52,7 @@ import academics1 from "../../image/homepage/1.jpeg";
       </div>
     </Sal>
   </div>
-  <Sal preset="fade" d="400" t="400" class="flex-shrink-0">
-    <Image
-      class="w-[384px] max-md:w-[210px] border-[10px] border-[#FFC784]/60"
-      src={academics1}
-      alt="Why choose Ekam??"
-  </Sal>
+  
   <div class="w-[1016px] h-[650px] max-[1030px]:w-full absolute -left-[50px] top-[280px] -z-[1]">
     <img src={gridBG.src} class="w-full h-full" />
   </div>

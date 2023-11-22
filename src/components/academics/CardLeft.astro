@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets"
-const { layout, image, alt } = Astro.props
+const { layout, image, alt, imagePosition="object-center" } = Astro.props
 ---
 <div
   class:list={[
@@ -12,5 +12,5 @@ const { layout, image, alt } = Astro.props
     layout === 'right' ? "left-[50px] rounded-tr-[160px]" : "-left-[50px] rounded-tl-[160px]"
     ]}
 >
-  <Image src={image} alt={alt} class="w-full h-full object-cover max-md:h-[240px]" />
+  <Image src={image} alt={alt} class:list={["w-full h-full object-cover max-md:h-[240px]", imagePosition]} width={1200} />
 </div>

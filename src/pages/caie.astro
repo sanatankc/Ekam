@@ -14,10 +14,12 @@ import Pedagogy from "../components/academics/pedagogy.astro";
 import StudentEnrichment from "../components/academics/StudentEnrichment.astro";
 
 import academic1 from "../image/academics/elementary.jpeg";
-import camprimary from "../image/academics/camprimary.png";
-import camsecondary from "../image/academics/camsecondary.png";
-import camsecondary2 from "../image/academics/camsecondary2.png";
-import camalevel from "../image/academics/camalevel.png";
+import kid2 from "../image/academics/kid2.png";
+import camprimary from "../image/academics/camprimary.jpeg";
+// import camsecondary from "../image/academics/camsecondary.png";
+import igcse from "../image/academics/igcse.jpeg";
+import camsecondary2 from "../image/academics/camsecondary3.jpeg";
+import camalevel from "../image/academics/camALevel.jpeg";
 import academic2 from "../image/academics/primary.jpeg";
 import academic3 from "../image/academics/middle.jpeg";
 import academic4 from "../image/academics/senior.png";
@@ -67,6 +69,7 @@ const toppers = campusConfig?.toppers;
 
   <Pedagogy
     noLogo 
+    image={kid2}
     title={['Empowering ', 'Inquisitive Minds']}
     description="Cambridge Assessment International Education prepares students for life, fostering an informed curiosity and a lasting passion for learning. As part of the University of Cambridge, we ensure our international qualifications are recognised by the world’s leading universities and employers, thereby offering students a vast array of options in their education and careers. We are committed to devoting our resources to deliver high-quality educational programs that unlock learners' potential."
   />
@@ -118,7 +121,7 @@ const toppers = campusConfig?.toppers;
   <div class="w-full bg-white">
     <Section class="flex flex-col items-center !px-[50px] max-md:!px-[20px]">
       <Card
-        image={camsecondary}
+        image={igcse}
         title={["IGCSE"]}
         layout="left"
         border
