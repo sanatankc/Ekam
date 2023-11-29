@@ -102,6 +102,15 @@ import interactClub from "../image/academics/interactClub.webp";
 import clubsBG from "../image/clubs/bg.jpeg";
 import StudentEnrichment from "../components/academics/StudentEnrichment.astro";
 
+
+import skating from "../image/academics/skating.jpg";
+import throwball from "../image/academics/throwball.jpg";
+import cricket from "../image/academics/crick.jpeg";
+import basketball from "../image/academics/basketball.jpg";
+import football from "../image/academics/footy.jpeg";
+import swimming from "../image/academics/swimming.jpeg";
+
+
 const clubs = [
   {
     title: ["MUN", "Club"],
@@ -164,6 +173,38 @@ const clubs = [
     thumbnail: interactClub,
   },
 ];
+const sports = [
+  {
+    title: "Throwball",
+    description: "Throwball",
+    thumbnail: throwball,
+  },
+  {
+    title: "Skating",
+    description: "Skating",
+    thumbnail: skating,
+  },
+  {
+    title: "Cricket",
+    description: "Cricket",
+    thumbnail: cricket,
+  },
+  {
+    title: "Basketball",
+    description: "Basketball",
+    thumbnail: basketball,
+  },
+  {
+    title: "Football",
+    description: "Football",
+    thumbnail: football,
+  },
+  {
+    title: "Swimming",
+    description: "Swimming",
+    thumbnail: swimming,
+  }
+];
 ---
 
 <Layout
@@ -204,6 +245,62 @@ const clubs = [
 
     <div class="w-full text-center">
       <Text type="h2">
+        Ekam <span class="text-primary">Sports</span>
+      </Text>
+      <div class="p-1"></div>
+      <Text type="base" class="[&>span]:text-primary">
+        Engage in Personalised Learning and Enrichment through Our Dynamic Sports.
+      </Text>
+    </div>
+
+    <div
+      class="flex flex-row flex-wrap gap-5 mt-6 justify-center items-center"
+    >
+      {
+        sports.map((club, i) => (
+          <div
+            style={{
+              background: "linear-gradient(0deg, #FFF7F2 -2.33%, #FFF 29.76%)",
+              backdropFilter: "blur(16px)",
+              borderRadius: "24px",
+            }}
+            class:list={[
+              "p-4 min-w-[400px] flex-1 min-h-[530px] border-[#B8B8B8]/60 border max-md:min-w-full",
+              // (i === sports.length - 1 || i === sports.length-2) && "flex flex-row min-h-[auto] gap-4 max-md:block max-md:min-h-[530px]"
+            ]}
+          > 
+            <Image
+              class:list={[
+                "w-full h-[320px] object-cover object-center rounded-2xl",
+                // (i === sports.length - 1 || i === sports.length-2) && "w-[30%] !h-[200px] max-md:!h-[320px]"
+              ]}
+              src={club.thumbnail}
+              width={700}
+              alt={club.title}
+            />
+            <div>
+              <Text type="h4" class="mt-4">
+                <span class="text-primary">{club.title}</span>
+              </Text>
+              <Text
+                type="sm"
+                class="mt-2 [&>span]:text-primary [&>span]:font-bold"
+                set:html={club.description}
+              />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+  </Section>
+  <div id="studentenrichment">
+    <StudentEnrichment />
+  </div>
+  <Section>
+
+    <div class="w-full text-center">
+      <Text type="h2">
         Ekam <span class="text-primary">Clubs</span>
       </Text>
       <div class="p-1"></div>
@@ -228,14 +325,14 @@ const clubs = [
               i === clubs.length - 1 && "flex flex-row min-h-[auto] gap-4 max-md:block max-md:min-h-[530px]"
             ]}
           >
-            <div
+            <Image
               class:list={[
-                "w-full h-[320px] bg-cover bg-center rounded-2xl",
-                i === clubs.length - 1 && "!h-[200px] max-md:!h-[320px]"
+                "w-full h-[320px] object-cover object-center rounded-2xl",
+                // (i === sports.length - 1 || i === sports.length-2) && "w-[30%] !h-[200px] max-md:!h-[320px]"
               ]}
-              style={{
-                backgroundImage: `url(${club.thumbnail.src})`,
-              }}
+              src={club.thumbnail}
+              width={700}
+              alt={club.title[0] + ' ' + club.title[1]}
             />
             <div>
               <Text type="h4" class="mt-4">
@@ -255,9 +352,7 @@ const clubs = [
 
   </Section>
 
-  <div id="studentenrichment">
-    <StudentEnrichment />
-  </div>
+  
 
   <GoToCta />
   <Footer />
