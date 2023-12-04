@@ -173,37 +173,63 @@ const clubs = [
     thumbnail: interactClub,
   },
 ];
+
+// Swimming: 
+
+// Basketball: 
+
+// Football: 
+
+// Volleyball: Volleyball training enhances hand-eye coordination, agility, and team spirit, with expert coaching on our high-quality courts.
+
+// Chess: Our chess club sharpens strategic thinking and decision-making skills, fostering mental agility in a supportive, competitive environment.
+
+// Handball: 
+
+// Netball: Netball training focuses on teamwork, agility, and precision, with students learning from experienced coaches in top-notch facilities.
+
+// Karate: Our karate classes promote discipline, self-defense, and physical fitness, taught by certified instructors in a safe environment.
+
+// Cricket: 
+
+// Skating: 
+
+// Lawn Tennis: Our lawn tennis program fosters agility, technique, and endurance, with professional coaching on well-maintained courts.
+
+// Table Tennis: Table tennis at our school hones reflexes, concentration, and tactical thinking, played in a fun, competitive setting.
+
+// Badminton: Badminton coaching emphasizes agility, hand-eye coordination, and strategic play, conducted in our modern, well-equipped facilities.
 const sports = [
   {
-    title: "Throwball",
-    description: "Throwball",
-    thumbnail: throwball,
-  },
-  {
-    title: "Skating",
-    description: "Skating",
-    thumbnail: skating,
-  },
-  {
     title: "Cricket",
-    description: "Cricket",
+    description: "Cricket coaching covers all aspects of the game, emphasizing teamwork, strategic play, and skill development on well-equipped grounds.",
     thumbnail: cricket,
   },
   {
     title: "Basketball",
-    description: "Basketball",
+    description: "Basketball at our school focuses on teamwork, coordination, and agility, coached by experts on our professional-standard courts.",
     thumbnail: basketball,
   },
   {
     title: "Football",
-    description: "Football",
+    description: "Our football program emphasizes physical fitness, strategic thinking, and teamwork, coached on well-maintained pitches for optimal training.",
     thumbnail: football,
   },
   {
     title: "Swimming",
-    description: "Swimming",
+    description: "Our swimming program helps students develop strength and endurance while teaching vital safety skills in our state-of-the-art aquatic facility.",
     thumbnail: swimming,
-  }
+  },
+  {
+    title: "Handball",
+    description: "Handball at our school combines speed, strength, and strategy, offering a dynamic team experience under skilled guidance.",
+    thumbnail: throwball,
+  },
+  {
+    title: "Skating",
+    description: "Skating classes improve balance, coordination, and strength, guided by skilled instructors in our safe, specially designed rinks.",
+    thumbnail: skating,
+  },
 ];
 ---
 
@@ -243,18 +269,18 @@ const sports = [
 
   <Section>
 
-    <div class="w-full text-center">
+    <div class="w-full text-center flex flex-col items-center">
       <Text type="h2">
         Ekam <span class="text-primary">Sports</span>
       </Text>
       <div class="p-1"></div>
-      <Text type="base" class="[&>span]:text-primary">
-        Engage in Personalised Learning and Enrichment through Our Dynamic Sports.
+      <Text type="base" class="[&>span]:text-primary w-[93%] max-md:w-full">
+        At Ekam , we believe that sports are an integral part of the educational process and have integrated sports firmly as a part of our curriculum. Our <span>Sports Education Program (SEP)</span> emphasises on the development of knowledge, attitudes and skills related to a range of physical and health related activities. With our national and international size courts and sports infrastructure as well as expert professional coaches, we offer a wide range of sporting activities to enrich our students' physical development.
       </Text>
     </div>
 
     <div
-      class="flex flex-row flex-wrap gap-5 mt-6 justify-center items-center"
+      class="flex flex-row flex-wrap gap-5 mt-12 justify-center items-center"
     >
       {
         sports.map((club, i) => (
@@ -265,7 +291,7 @@ const sports = [
               borderRadius: "24px",
             }}
             class:list={[
-              "p-4 min-w-[400px] flex-1 min-h-[530px] border-[#B8B8B8]/60 border max-md:min-w-full",
+              "p-4 min-w-[400px] flex-1 min-h-[500px] border-[#B8B8B8]/60 border max-md:min-w-full",
               // (i === sports.length - 1 || i === sports.length-2) && "flex flex-row min-h-[auto] gap-4 max-md:block max-md:min-h-[530px]"
             ]}
           > 
@@ -328,7 +354,7 @@ const sports = [
             <Image
               class:list={[
                 "w-full h-[320px] object-cover object-center rounded-2xl",
-                // (i === sports.length - 1 || i === sports.length-2) && "w-[30%] !h-[200px] max-md:!h-[320px]"
+                (i === clubs.length - 1) && "w-[30%] !h-[200px] max-md:!h-[320px]"
               ]}
               src={club.thumbnail}
               width={700}

@@ -14,12 +14,13 @@ const {
   noLogo = false,
   title = ['Aspiring ', 'for Excellence'],
   description = "Ekam's educational philosophy, shaped by MDN Edify Education, centers on Inquiry-Based Learning, nurturing progressive thinking and curiosity. Our 3C policy emphasizes character, competence, and content, offering interactive and integrated learning experiences. Our pedagogical approach prioritizes student-centered learning, incorporating diverse teaching strategies like QAXP and RAFT.",
-  image=kid
+  image=kid,
+  class: className
 } = Astro.props
 
 ---
 
-<Section>
+<Section class={className}>
   <div
     class="flex flex-row gap-[72px] max-md:gap-[30px] max-md:flex-col max-md:items-center relative"
   >
