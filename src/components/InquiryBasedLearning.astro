@@ -1,0 +1,499 @@
+---
+import { Image } from "astro:assets";
+import Section from "./system/Section.astro";
+import Text from "./system/Text.astro";
+import FilledArrowCircle from "./icons/FilledArrowCircle.astro";
+
+import blobBig from "../fillers/blobBig.png";
+
+---
+<Section class="flex flex-col w-full items-center text-left">
+  <div id="inquirybasedlearning" />
+  <Image
+    src={blobBig}
+    class="w-[268px] max-md:w-[140px]"
+    alt="Decorative Element"
+  />
+  <div class="pt-8"></div>
+  <Text type="lg" class="text-center">
+    Empowering Through <span class="text-primary"
+      >Inquiry</span
+    >
+  </Text>
+  <div class="pt-4 max-md:pt-2"></div>
+  <Text type="h2">Inquiry-based Learning</Text>
+  <div class="pt-8 max-md:pt-2"></div>
+  <Text
+    type="base"
+    class="w-[51%] max-md:w-full text-center [&>span]:text-primary"
+  >
+    Inquiry is the driving factor and leading pedagogical approach that makes
+    Ekam classrooms so <span>distinctive and unique.</span>
+  </Text>
+
+  <div class="pt-16 max-md:pt-6"></div>
+
+  <div class="w-full flex flex-col gap-3 text-white">
+
+    <div class="flex flex-row gap-3 max-md:h-auto">
+      <div class="h-full flex-1 bg-[#FFF8F0] rounded-[7px] border-[#FFE3C1] border-[7px] relative">
+        <!-- <div class="w-full h-[257px] ">
+          <div
+            class="w-full h-full"
+            style={{
+              background: `url(${what.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          >
+          </div>
+        </div> -->
+        <div
+          class="max-md:min-h-[420px] w-full h-full rounded-[7px] flex flex-col justify-end max-md:px-[0px] max-md:pt-8 z-[1] relative"
+        >
+          <div
+            class="px-[37px] py-6"
+          >
+            <Text type="h3" class="text-black [&>span]:text-primary"><span>What</span> is Inquiry Based Curriculum?</Text>
+            <div class="p-1"></div>
+            <Text type="base" class="text-black text-[600]">
+              With the help of a mastermind team, Edify has developed the curriculum guided by the vision o creating progressive thinking Individuals who will create a positive change in the society. It is unique and progressive concept that seeks to create a social place of learning and knowledge Where “Why” is encouraged and “What” is nurtured.
+              <br/>
+              <div data-read-more="0" class="hidden">
+                <br/>
+                It is an inclusive vast concept where self esteem and independence, leadership and innovation problem solving and responsibility are emphasized in a participative environment of academi inquiry. The inculcation of these values and many more vital skills will help your child step int tomorrow competently and confidently.
+              </div>
+              
+            </Text>
+
+            <div class='flex flex-row items-center cursor-pointer mt-2' data-read-more-btn="0">
+              <Text type="base" class="text-primary uppercase font-medium read-more-text">Read More</Text>
+              <div class="w-[23px] h-[23px] text-primary rotate-90 ml-2 arrow [&.hide]:-rotate-90 transition-all">
+                <FilledArrowCircle />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row gap-3 max-md:h-auto">
+      <div class="h-full flex-1 bg-[#FFF8F0] rounded-[7px] border-[#FFE3C1] border-[7px] relative">
+        <!-- <div class="w-full h-[257px] ">
+          <div
+            class="w-full h-full"
+            style={{
+              background: `url(${why.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          >
+          </div>
+        </div> -->
+        <div
+          class="max-md:min-h-[420px] w-full h-full rounded-[7px] flex flex-col justify-end max-md:px-[0px] max-md:pt-8 z-[1] relative"
+        >
+          <div
+            class="px-[37px] py-6"
+          >
+            <Text type="h3" class="text-black [&>span]:text-primary"><span>Why</span> Inquiry Based Curriculum?</Text>
+            <div class="p-1"></div>
+            <Text type="base" class="text-black text-[600]">
+              Our education model revolves around ‘Inquiry based learning’ through the ‘holistic approach’ which develops ‘Character, Competence and Content’ in a child, and ensures holistic education to the child.
+              <br/><br/>
+              Our environment and curriculum reflects the natural needs of the young inquisitive mind of the child.
+              <div data-read-more="1" class="hidden">
+                <br/>
+                Our holistic education program is designed by infusing the best of international learning practices which provide the best learning environment to each individual learning style of the child.
+                <br/><br/>
+                Our child centric approach helps the child to give meaning to their world.
+                <br/><br/>
+                Our trans-disciplinary approach caters the need of the individual learning style of the child.
+              </div>
+              
+            </Text>
+
+            <div class='flex flex-row items-center cursor-pointer mt-2' data-read-more-btn="1">
+              <Text type="base" class="text-primary uppercase font-medium read-more-text">Read More</Text>
+              <div class="w-[23px] h-[23px] text-primary rotate-90 ml-2 arrow [&.hide]:-rotate-90 transition-all">
+                <FilledArrowCircle />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="flex flex-row gap-3 max-md:h-auto">
+      <div class="h-full flex-1 bg-[#FFF8F0] rounded-[7px] border-[#FFE3C1] border-[7px] relative">
+        <!-- <div class="w-full h-[257px] ">
+          <div
+            class="w-full h-full"
+            style={{
+              background: `url(${profiles.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          >
+          </div>
+        </div> -->
+        <div
+          class="max-md:min-h-[420px] w-full h-full rounded-[7px] flex flex-col justify-end max-md:px-[0px] max-md:pt-8 z-[1] relative"
+        >
+          <div
+            class="px-[37px] py-6"
+          >
+            <Text type="h3" class="text-black [&>span]:text-primary"><span>Profiles</span> in Inquiry Based Curriculum</Text>
+            <div class="p-1"></div>
+            <Text type="base" class="text-black text-[600]">
+
+              <span class="font-bold">Character:</span> Dispositions that are expressions of fundamental values, beliefs and feelings about learning, the environment and the people. 
+              <br /><br />
+
+              <span class="font-bold">Competence:</span> Those capabilities that the students need to demonstrate to succeed in a changing, challenging world, which may be disciplinary or trans disciplinary in nature.
+              <br /><br />
+
+
+              <span class="font-bold">Content:</span> Significant, relevant content that we wish students to explore and know about, taking into consideration their prior experience and understanding.
+              
+              
+            </Text>
+
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+
+    <div class="flex flex-row gap-3 max-md:h-auto">
+      <div class="h-full flex-1 bg-[#FFF8F0] rounded-[7px] border-[#FFE3C1] border-[7px] relative">
+        <!-- <div class="w-full h-[257px] ">
+          <div
+            class="w-full h-full"
+            style={{
+              background: `url(${why.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          >
+          </div>
+        </div> -->
+
+        
+      <div
+        class="max-md:min-h-[420px] w-full h-full rounded-[7px] flex flex-col justify-end max-md:px-[0px] max-md:pt-8 z-[1] relative"
+      >
+        <div
+          class="px-[37px] py-6"
+        >
+          <Text type="h3" class="text-black [&>span]:text-primary"><span>Learner</span> Profiles</Text>
+          <div class="p-1"></div>
+          <Text type="base" class="text-black text-[600]">
+            <ul class="list list-decimal pl-3">
+              <li><span class="font-bold">Inquirers-</span>They develop their natural curiosity. They acquire the skills necessary to conduct inquiry and research and show independence in learning. They actively enjoy learning and this love of learning will be sustained throughout their lives.</li><br/>
+              <li><span class="font-bold">Knowledgeable-</span>They explore concepts, ideas and issues that have local and global significance. In so doing, they acquire in-depth knowledge and develop understanding across a broad and balanced range of disciplines.</li><br/>
+              <div data-read-more="2" class="hidden">
+                <li><span class="font-bold">Thinkers-</span>They exercise initiative in applying thinking skills critically and creatively to recognize and approach complex problems, and make reasoned, ethical decisions.</li><br/>
+                <li><span class="font-bold">Communicators-</span>They understand and express ideas and information confidently and creatively in more than one language and in a variety of modes of communication. They work effectively and willingly in collaboration with others.</li><br/>
+                <li><span class="font-bold">Principled-</span>They act with integrity and honesty, with a strong sense of fairness, justice and respect for the dignity of the individual, groups and communities. They take responsibility for their own actions and the consequences that accompany them.</li><br/>
+                <li><span class="font-bold">Open-</span>minded-They understand and appreciate their own cultures and personal histories, and are open to the perspectives, values and traditions of other individuals and communities. They are accustomed to seeking and evaluating a range of points of view, and are willing to grow from the experience.</li><br/>
+                <li><span class="font-bold">Caring-</span>They show empathy, compassion and respect towards the needs and feelings of others. They have a personal commitment to service, and act to make a positive difference to the lives of others and to the environment.</li><br/>
+                <li><span class="font-bold">Risk-</span>takers-They approach unfamiliar situations and uncertainty with courage and forethought, and have the independence of spirit to explore new roles, ideas and strategies. They are brave and articulate in defending their beliefs.</li><br/>
+                <li><span class="font-bold">Balanced-</span>They understand the importance of intellectual, physical and emotional balance to achieve personal well-being for themselves and others.</li><br/>
+                <li><span class="font-bold">Reflective-</span>They understand by thinking about and asking themselves questions about he things they learn and do.</li>
+              </div>
+            </ul>
+          </Text>
+          <div class='flex flex-row items-center cursor-pointer mt-2' data-read-more-btn="2">
+            <Text type="base" class="text-primary uppercase font-medium read-more-text">Read More</Text>
+            <div class="w-[23px] h-[23px] text-primary rotate-90 ml-2 arrow [&.hide]:-rotate-90 transition-all">
+              <FilledArrowCircle />
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-row gap-3 max-md:h-auto">
+      <div class="h-full flex-1 bg-[#FFF8F0] rounded-[7px] border-[#FFE3C1] border-[7px] relative">
+        <!-- <div class="w-full h-[257px] ">
+          <div
+            class="w-full h-full"
+            style={{
+              background: `url(${why.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          >
+          </div>
+        </div> -->
+
+        
+      <div
+        class="max-md:min-h-[420px] w-full h-full rounded-[7px] flex flex-col justify-end max-md:px-[0px] max-md:pt-8 z-[1] relative"
+      >
+        <div
+          class="px-[37px] py-6"
+        >
+          <Text type="h3" class="text-black [&>span]:text-primary"><span>Character</span> Profiles</Text>
+          <div class="p-1"></div>
+          <Text type="base" class="text-black text-[600]">
+            These are some basic traits imbibed by the learners through a value system continuously evolving for a harmonious co-existence in the world at large.
+            <ul class="list list-decimal pl-3">
+              <br />
+              <li><span class="font-bold">Independent</span> : One who is free, easy, bold, unconstrained. One who develops his/her own natural curiosity and skills necessary to carry out inquiries and show independence in learning.</li><br />
+              <li><span class="font-bold">Balanced</span> : One who understands the importance of intellectual, physical and emotional balance to achieve personal well being.</li><br />
+              <div data-read-more="14" class="hidden">
+                <li><span class="font-bold">Responsible</span> : One who is reliable, who can be trusted and depended upon. Understands and expresses ideas and information creatively in a variety of mode of communication.</li><br />
+                <li><span class="font-bold">Integrity</span> : One who is honest and adheres to moral and ethical principles.</li><br />
+                <li><span class="font-bold">Confident</span> : One who has a firm belief in one’s power, abilities and making appropriate decisions and choices.</li><br />
+                <li><span class="font-bold">Optimistic</span> : One who has a positive attitude and always assumes the best outcome.</li><br />
+                <li><span class="font-bold">Courageous</span> : One who has the ability to approach unfamiliar situations, difficulty and uncertainty or pain without being overcome by fear, and have the spirit to explore new ideas and strategies.</li><br />
+                <li><span class="font-bold">Committed</span> : One who is devoted to his/her actions and words and takes responsibility for the consequences that comes with it.</li><br />
+                <li><span class="font-bold">Enthusiastic</span> : One who is eager to understand concepts, ideas and takes initiative and in so doing acquire in-depth knowledge of the balanced range of discipline.</li><br />
+                <li><span class="font-bold">Respect for all</span> : One who has feeling and respect for need of everybody around them. They try to make a positive difference to the lives of others.</li><br />
+                <li><span class="font-bold">Self Esteemed</span> : One who has a high sense of personal worth and ability and encompasses beliefs and emotions such as triumph, despair and pride.</li><br />
+                <li><span class="font-bold">Empathetic</span> : One who has the ability to identify with and understand other’s feelings and difficulties and is always ready to help.</li><br />
+                <li><span class="font-bold">Open minded</span> : One who is free from prejudices and receptive to new ideas.</li><br />
+                <li><span class="font-bold">Inquirer</span> : One who develops ones natural curiosity and the necessary skills to carry out inquiry and research in learning.</li><br />
+                <li><span class="font-bold">Participative Competence</span> : One who is willing to share his/her knowledge with others and take part in all the works related to learning.</li><br />
+              </div>
+            </ul>
+          </Text>
+          <div class='flex flex-row items-center cursor-pointer mt-2' data-read-more-btn="14">
+            <Text type="base" class="text-primary uppercase font-medium read-more-text">Read More</Text>
+            <div class="w-[23px] h-[23px] text-primary rotate-90 ml-2 arrow [&.hide]:-rotate-90 transition-all">
+              <FilledArrowCircle />
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row gap-3 max-md:h-auto">
+      <div class="h-full flex-1 bg-[#FFF8F0] rounded-[7px] border-[#FFE3C1] border-[7px] relative">
+        <!-- <div class="w-full h-[257px] ">
+          <div
+            class="w-full h-full"
+            style={{
+              background: `url(${assesment.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          >
+          </div>
+        </div> -->
+
+        
+      <div
+        class="max-md:min-h-[420px] w-full h-full rounded-[7px] flex flex-col justify-end max-md:px-[0px] max-md:pt-8 z-[1] relative"
+      >
+        <div
+          class="px-[37px] py-6"
+        >
+          <Text type="h3" class="text-black [&>span]:text-primary"><span>Competence</span> Profiles</Text>
+          <div class="p-1"></div>
+          <Text type="base" class="text-black text-[600]">
+            Some of the skills developed by learners effectively and continuously for a progressive continual growth.
+            <ul class="list list-decimal pl-3">
+              <br />
+              <li><span class="font-bold">Innovative : </span>One who is creative especially in the way that something is done.</li></br>
+              <li><span class="font-bold">Pro-active : </span>One who takes an action in advance to deal with an expected difficulty.</li></br>
+              <div data-read-more="4" class="hidden">
+                <li><span class="font-bold">Communicative : </span>One who is able to communicate his/her ideas clearly and readily.</li></br>
+                <li><span class="font-bold">Leaders : </span>One who is able to influence others towards achieving goals.</li></br>
+                <li><span class="font-bold">Adaptable : </span>One who is able to adjust easily to a new environment or to different conditions.</li></br>
+                <li><span class="font-bold">Organized : </span>One who plans one’s activity efficiently and methodically.</li></br>
+                <li><span class="font-bold">Assertive : </span>One who is strong in putting forward one’s views.</li></br>
+                <li><span class="font-bold">Passionate : </span>One who expresses an intense desire for something.</li></br>
+                <li><span class="font-bold">Perseverant : </span>One who has steady and continued action or belief, usually over a long period and especially despite difficulties or setbacks.</li></br>
+                <li><span class="font-bold">Thinker : </span>One who is curious and reasons while reflecting on the predicament, then chooses to respond ingenuously rather than react to the situation.</li></br>
+                <li><span class="font-bold">Focused : </span>One who concentrates on a task until it is accomplished.</li></br>
+                <li><span class="font-bold">Risk taker : </span>One who takes chances in hopes of winning. One who is brave and articulate in defending his/her beliefs. </li></br>
+                <li><span class="font-bold">Decision Maker : </span>One who is capable of making a logical decision from the available options.</li></br>
+                <li><span class="font-bold">Updated : </span>One who is aware of the most recent information than was previously available and tries to acquire the same.</li></br>
+                <li><span class="font-bold">Research Oriented : </span>One who does methodical investigation into a subject in order to discover the facts, to establish or revise a theory, or to develop a plan of action based on the facts discovered.</li></br>
+              </div>
+
+            </ul>
+          </Text>
+          <div class='flex flex-row items-center cursor-pointer mt-2' data-read-more-btn="4">
+            <Text type="base" class="text-primary uppercase font-medium read-more-text">Read More</Text>
+            <div class="w-[23px] h-[23px] text-primary rotate-90 ml-2 arrow [&.hide]:-rotate-90 transition-all">
+              <FilledArrowCircle />
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-row gap-3 max-md:h-auto">
+      <div class="h-full flex-1 bg-[#FFF8F0] rounded-[7px] border-[#FFE3C1] border-[7px] relative">
+        <!-- <div class="w-full h-[257px] ">
+          <div
+            class="w-full h-full"
+            style={{
+              background: `url(${theme.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          >
+          </div>
+        </div> -->
+
+        
+      <div
+        class="max-md:min-h-[420px] w-full h-full rounded-[7px] flex flex-col justify-end max-md:px-[0px] max-md:pt-8 z-[1] relative"
+      >
+        <div
+          class="px-[37px] py-6"
+        >
+          <Text type="h3" class="text-black [&>span]:text-primary"><span>Themes</span> in Inquiry Based Curriculum</Text>
+          <div class="p-1"></div>
+          <Text type="base" class="text-black text-[600]">
+            The curriculum incorporates 6 Trans-disciplinary Themes that enable the children to construct their learning through meaningful everyday life experiences and perceptions that they can relate to. Thus learning is more contextual, analytical, interesting and memorable.
+            <ul class="list list-disc pl-3">
+              <br />
+              <li><span class="font-bold">Who We Are–</span> An inquiry into the nature of the self; beliefs and values; personal, physical, mental, social and spiritual health; human relationships including families, friends, communities, and cultures; rights and responsibilities; what it means to be human.</span></li>
+              
+              <div data-read-more="5" class="hidden">
+                <li><span class="font-bold">Where We Are in Place & Time–</span> An inquiry into orientation in place and time; personal histories; homes and journeys; the discoveries, explorations and migrations of humankind; the relationships between and the interconnectedness of individuals and civilizations, from local and global perspectives</span></li>
+                <li><span class="font-bold">How We Express Ourselves–</span> An inquiry into the ways in which we discover and express ideas, feelings, nature, culture, beliefs and values; the ways in which we reflect on, extend and enjoy our creativity; our appreciation of the aesthetic</span></li>
+                <li><span class="font-bold">How the World Works–</span> An inquiry into the natural world and its laws; the interaction between the natural world (physical and biological) and human societies; how humans use their understanding of scientific principles; the impact of scientific and technological advances on society and on the environment</span></li>
+                <li><span class="font-bold">How We Organize Ourselves–</span> An inquiry into the inter connectedness of human-made systems and communities; the structure and function or organizations; societal decision- making; economic activities and their impact on humankind and the environment</span></li>
+                <li><span class="font-bold">Sharing the Planet–</span> An inquiry into the rights and responsibilities in the struggle to share finite resources with other people and with other living things; communities and the relationships within and between them; access to equal opportunities; peace and conflict resolution.</span></li>  
+<br/>
+                EKAM is committed to providing high quality, challenging, international education by engaging students in a concept- based curriculum, an education for the understanding of significant ideas.
+                <br/>
+                <br/>
+
+                The key concepts are powerful ideas that have relevance within the subject area and that students explore and re-explore in order to develop a coherent, in-depth understanding.
+              </div>
+            </ul>
+          </Text>
+          <div class='flex flex-row items-center cursor-pointer mt-2' data-read-more-btn="5">
+            <Text type="base" class="text-primary uppercase font-medium read-more-text">Read More</Text>
+            <div class="w-[23px] h-[23px] text-primary rotate-90 ml-2 arrow [&.hide]:-rotate-90 transition-all">
+              <FilledArrowCircle />
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row gap-3 max-md:h-auto">
+      <div class="h-full flex-1 bg-[#FFF8F0] rounded-[7px] border-[#FFE3C1] border-[7px] relative">
+        <!-- <div class="w-full h-[257px] ">
+          <div
+            class="w-full h-full"
+            style={{
+              background: `url(${theme.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          >
+          </div>
+        </div> -->
+
+        
+      <div
+        class="max-md:min-h-[420px] w-full h-full rounded-[7px] flex flex-col justify-end max-md:px-[0px] max-md:pt-8 z-[1] relative"
+      >
+        <div
+          class="px-[37px] py-6"
+        >
+          <Text type="h3" class="text-black [&>span]:text-primary"><span>8</span> Key Concepts & Key Questions</Text>
+          <div class="p-1"></div>
+          <Text type="base" class="text-black text-[600]">
+            <ul class="list list-disc pl-3">
+
+              <li><span class="font-bold">Form-</span> What is it like?</li>
+              <li><span class="font-bold">Function-</span> How does it work?</li>
+              <div data-read-more="6" class="hidden">
+                <li><span class="font-bold">Causation-</span> Why is it like it is?</li>
+                <li><span class="font-bold">Change-</span> How is it changing?</li>
+                <li><span class="font-bold">Connection-</span> How is it connected to other things?</li>
+                <li><span class="font-bold">Perspective-</span> What are the points of view?</li>
+                <li><span class="font-bold">Responsibility-</span> What is our responsibility?</li>
+                <li><span class="font-bold">Reflection-</span> How do we know?</li>
+                <li><span class="font-bold">Responsible</span> : One who is reliable, who can be trusted and depended upon. Understands and expresses ideas and information creatively in a variety of mode of communication.</li>
+                <li><span class="font-bold">Integrity</span> : One who is honest and adheres to moral and ethical principles.</li>
+              </div>
+            </ul>
+          </Text>
+          <div class='flex flex-row items-center cursor-pointer mt-2' data-read-more-btn="6">
+            <Text type="base" class="text-primary uppercase font-medium read-more-text">Read More</Text>
+            <div class="w-[23px] h-[23px] text-primary rotate-90 ml-2 arrow [&.hide]:-rotate-90 transition-all">
+              <FilledArrowCircle />
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-row gap-3 max-md:h-auto">
+      <div class="h-full flex-1 bg-[#FFF8F0] rounded-[7px] border-[#FFE3C1] border-[7px] relative">
+        <!-- <div class="w-full h-[257px] ">
+          <div
+            class="w-full h-full"
+            style={{
+              background: `url(${theme.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 25%",
+            }}
+          >
+          </div>
+        </div> -->
+
+        
+      <div
+        class="max-md:min-h-[420px] w-full h-full rounded-[7px] flex flex-col justify-end max-md:px-[0px] max-md:pt-8 z-[1] relative"
+      >
+        <div
+          class="px-[37px] py-6"
+        >
+          <Text type="h3" class="text-black [&>span]:text-primary"><span>Skills</span></Text>
+          <div class="p-1"></div>
+          <Text type="base" class="text-black text-[600]">
+            <ul class="list list-decimal pl-3">
+
+              <li><span class="font-bold">Thinking Skills:</span> Acquisition of knowledge, Comprehension, Application, Analysis, Synthesis, Evaluation, Dialectical thought, Metacognition</li>
+              <li><span class="font-bold">Social Skills:</span> Accepting responsibility, Respecting others, Cooperating, Resolving conflict, Group decision-making, Adopting a variety of group roles.</li>
+              
+              
+              
+              <div data-read-more="7" class="hidden">
+                <li><span class="font-bold">Communication Skills:</span> Listening, Speaking, Reading, Writing, Viewing, Presenting, Non-verbal communication</li>
+                <li><span class="font-bold">Self-Management </span>Skills: Gross motor skills, Fine motor skills, Spatial awareness, Organization, Time management, Safety, Healthy life style. Codes of behavior, Informed choices</li>
+                <li><span class="font-bold">Research Skills:</span> Formulating questions, Observing, Planning, Collecting data, Recording data, Organizing data, Interpreting data. Presenting research findings</li>
+              </div>
+            </ul>
+          </Text>
+          <div class='flex flex-row items-center cursor-pointer mt-2' data-read-more-btn="7">
+            <Text type="base" class="text-primary uppercase font-medium read-more-text">Read More</Text>
+            <div class="w-[23px] h-[23px] text-primary rotate-90 ml-2 arrow [&.hide]:-rotate-90 transition-all">
+              <FilledArrowCircle />
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    
+
+
+  </div>
+</Section>

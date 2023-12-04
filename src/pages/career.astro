@@ -1,0 +1,375 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// import Hero from '../components/Hero.astro';
+import TopNavigationBar from "../components/TopNavigationBar.astro";
+
+import Collapsible from "../components/admissions/Collapsible.astro";
+
+// import Scholarship from '../components/register/scholarship.astro';
+import RegisterForm from "../components/admissions/admissionForm.astro";
+import "../global.css";
+
+import "@fontsource/nunito-sans";
+import titleBG from "../images/titleBG.png";
+import blobBig from "../fillers/blobBig.png";
+
+import Footer from "../components/landingPage/Footer.astro";
+import Text from "../components/system/Text.astro";
+
+import { Image } from "astro:assets";
+
+import PrePrimaryBG from "../images/curriculum/prePrimary.png";
+import PrimaryBG from "../images/curriculum/primary.png";
+import MiddleAndHighBG from "../images/curriculum/middle&High.png";
+
+import Section from "../components/system/Section.astro";
+import Slide from "../components/system/Slide.astro";
+
+// import slide1 from "../image/slides/1.jpeg";
+// import slide2 from "../image/slides/2.jpeg";
+// import slide3 from "../image/slides/3.jpeg";
+import slide1 from "../image/slides/4.jpeg";
+import slide2 from "../image/slides/5.jpeg";
+import slide3 from "../image/slides/8.jpeg";
+
+import slide1MB from "../image/slides/mb/special/1.png";
+import slide2MB from "../image/slides/mb/special/3.png";
+import slide3MB from "../image/slides/mb/2.png";
+import circleScribble from "../fillers/circleScribble.png";
+
+import PhoneWhite from "../icons/PhoneWhite.svg";
+
+const faqs = [
+  {
+    question: "Payment Terms & Conditions",
+    answer: "",
+  },
+  {
+    question: "What are the admission requirements?",
+    answer: "",
+  },
+  {
+    question: "Is there an application deadline for admissions?",
+    answer: "",
+  },
+  {
+    question: "What are the tuition fees for the programs?",
+    answer: "",
+  },
+  {
+    question: "How do I schedule a campus visit?",
+    answer: "",
+  },
+];
+---
+
+<Layout
+  title="Admissions | Best International K12 Primary Schools South bengalore Electronic City"
+>
+  <TopNavigationBar hideMenu applyNowButtonId="register-page-apply-now" />
+  <main class="flex flex-col min-h-screen max-md:h-auto w-screen relative">
+    <div
+      class="flex-1 flex flex-col main-container max-md:h-auto min-h-screen w-screen"
+      id="scroll-area"
+      style={{
+        overflowY: "overlay",
+        overflowX: "hidden",
+      }}
+    >
+    <!-- <div
+      class="w-full h-[204px] max-md:h-[190px] flex flex-col items-center justify-center"
+      style={{
+        background: `url(${titleBG.src})`,
+      }}
+    >
+      <Text type="h2">
+        <span class="relative !text-black !not-italic">
+          Join
+          <div class="w-[100px] absolute -top-4 -left-10 -z-[1]">
+            <Image
+              src={circleScribble}
+              alt="circle scribble"
+              class="w-full h-full"
+            />
+          </div>
+        </span> <span class="">Our Team</span>
+      </Text>
+      <div class="p-2"></div>
+      <Text type="lg" class="text-center">
+        Shape futures with Ekam.
+      </Text>
+    </div> -->
+
+      <Section class="w-full flex flex-col items-center">
+        <Image
+          src={blobBig}
+          class="w-[268px] max-md:w-[140px]"
+          alt="Decorative Element"
+        />
+        <div class="pt-8"></div>
+        <Text type="h2">Open <span class="not-italic"> Roles</span></Text>
+        <div class="pt-3"></div>
+        <Text type="base" class="w-full max-w-[600px] font-medium text-center">
+          We are always on the lookout for great talent and we have opportunities that may interest you.
+        </Text>
+        <div class="p-4"></div>
+
+        <div
+          class="px-[60px] py-[30px] rounded-md border gap-8 border-primary border-dashed flex flex-row max-md:flex-col max-md:px-[20px] max-md:py-[20px] justify-between"
+          style={{
+            background: "rgba(255, 232, 204, 0.32)",
+          }}
+        >
+          <div class="flex flex-row gap-[20px] max-md:gap-[10px]">
+            <div class="w-full">
+              <Text
+                type="base"
+                class="bg-[#FFE3C1] py-[7px] text-primary font-bold text-center"
+              >
+                Role
+              </Text>
+              <div
+                class="w-full py-[30px] max-md:py-[15px] px-[60px] max-md:px-[10px] flex flex-col gap-[13px] bg-white text-primary text-center [&>*]:min-w-max"
+              >
+                <Text type="base">Principal</Text>
+                <Text type="base">Programme Heads</Text>
+                <Text type="base">Teachers</Text>
+                <Text type="base">Administration</Text>
+                <Text type="base">OTHERS</Text>
+                <!-- <Text type="base">6</Text>
+              <Text type="base">7</Text> -->
+              </div>
+            </div>
+            <div class="w-full min-w-[180px] max-md:min-w-fit">
+              <Text
+                type="base"
+                class="bg-[#FFE3C1] py-[7px] max-md:px-[10px] text-black font-bold text-center"
+              >
+                Openings
+              </Text>
+              <div
+                class="w-full py-[30px] max-md:py-[15px] px-[48px] max-md:px-[20px] flex flex-col gap-[13px] bg-white text-black text-center [&>*]:min-w-max"
+              >
+                <Text type="base">3</Text>
+                <Text type="base">4</Text>
+                <Text type="base">5</Text>
+                <Text type="base">6</Text>
+                <Text type="base">7</Text>
+                <!-- <Text type="base">6</Text>
+              <Text type="base">7</Text> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-[60px]"></div>
+        <Image
+          src={blobBig}
+          class="w-[268px] max-md:w-[140px]"
+          alt="Decorative Element"
+        />
+        <div class="p-4"></div>
+        <Text type="h2">Hiring <span class="not-italic"> Procedure</span></Text>
+        <div class="p-3"></div>
+        <div class="p-3"></div>
+        <div class="flex flex-col gap-10">
+          <div class="flex flex-row gap-10">
+            <div class="flex flex-col items-center">
+              <Text type="subtitle" class="text-[#1C1C1C]/50">PHASE</Text>
+              <Text type="h2" class="font-sans font-bold">01</Text>
+            </div>
+            <div>
+              <Text type="h3" class="max-md:text-[22px]">
+                Online <span>application</span>
+              </Text>
+              <div class="p-3 max-md:p-1"></div>
+              <Text type="base">
+                Please mail your latest Resume/CV to <a href="mailto:edifyspoc@gmail.com" class="text-primary underline">edifyspoc@gmail.com</a> clearly mentioning:
+                <br/>
+                <br/>
+                <ul class="list-disc list-inside">
+                  <li>Post applied for</li>
+                  <li>Previous Experience</li>
+                  <li>Why EKAM International School</li>
+                </ul>
+                <br/>
+                Recruitment and Selection are two different stages in the hiring process. Recruitment involves getting the job description in front of as many potential candidates as possible. Selection is about narrowing down the pool of applicants until you are left with the strongest candidates.
+              </Text>
+            </div>
+          </div>
+          <div class="flex flex-row gap-10">
+            <div class="flex flex-col items-center">
+              <Text type="subtitle" class="text-[#1C1C1C]/50">PHASE</Text>
+              <Text type="h2" class="font-sans font-bold">02</Text>
+            </div>
+            <div>
+              <Text type="h3" class="max-md:text-[22px]">
+                Campus <span>Selection</span>
+              </Text>
+              <div class="p-3 max-md:p-1"></div>
+              <Text type="base">
+                Candidates may be invited to participate in in-person Campus Selection events and for a class demo relevant to your subject knowledge.
+              </Text>
+            </div>
+          </div>
+          <div class="flex flex-row gap-10">
+            <div class="flex flex-col items-center">
+              <Text type="subtitle" class="text-[#1C1C1C]/50">PHASE</Text>
+              <Text type="h2" class="font-sans font-bold">03</Text>
+            </div>
+            <div>
+              <Text type="h3" class="max-md:text-[22px]">
+                Finalizing <span> Employment process</span>
+              </Text>
+              <div class="p-3 max-md:p-1"></div>
+              <Text type="base">
+                Candidates will receive an 'Employee Information Form', a 'New Hire Letter', 'one-year Employee Probationary Contract'. Candidates must acknowledge receipt and intent to accept the offer. Offer remains Contingent on final clearance of background check and eligibility to teach.
+              </Text>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      
+      <Footer />
+    </div>
+
+    <!-- <a href="tel:7676310000">
+      <div class="fixed w-full h-14 bg-green-600 bottom-0 left-0 z-10 hidden max-md:flex items-center justify-center gap-4">
+        <div class="w-4 h-4">
+          <Image src={PhoneWhite} alt="Phone" class="w-full h-full object-cover" />
+        </div>
+        <Text type="sm">+91 76763 10000</Text>
+      </div>
+    </a> -->
+  </main>
+</Layout>
+
+<style>
+  .float {
+    position: fixed;
+    /* background-color:#25d366; */
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px #999; */
+    z-index: 100;
+  }
+
+  .float > div {
+    opacity: 0;
+    transition: 0.6s all ease-in-out;
+  }
+  .float a:hover ~ div {
+    opacity: 1;
+  }
+
+  .my-float {
+    margin-top: 16px;
+  }
+
+  .down-arrow-button {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    overflow: hidden;
+  }
+
+  .down-arrow-button:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+    animation: shineDownArrow 3s ease-out infinite;
+  }
+
+  @keyframes shineDownArrow {
+    0% {
+      left: -100px;
+    }
+    20% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  /* @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    } */
+  /* } */
+</style>
+
+<script>
+  // @@ts-ignore
+
+  // dev script temp
+  const applyNowButtons = document.querySelectorAll(
+    `[data-apply-now-button="register-page-apply-now"]`
+  );
+  applyNowButtons.forEach((applyNowButton) => {
+    applyNowButton?.addEventListener("click", () => {
+      if (window.innerWidth > 768) {
+        const registerFormContainer = document.getElementById(
+          "register-form-container-desktop"
+        );
+        registerFormContainer?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        const registerFormContainer = document.getElementById(
+          "register-form-container-mobile"
+        );
+        registerFormContainer?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
+  import collapsible, {
+    openCollapsible,
+  } from "../components/admissions/collapsible";
+  collapsible(".collapsible", null);
+
+  const downArrowButton = document.querySelector(".down-arrow-button");
+  document.addEventListener("scroll", (e) => {
+    // after scrolling 100px, show the button
+    if (window.scrollY > window.innerHeight / 5) {
+      downArrowButton?.classList.add("opacity-0");
+    }
+  });
+  const mainContainer = document.querySelector(".main-container");
+  if (mainContainer) {
+    // scroll to end
+    // mainContainer.scrollTo(0, mainContainer.scrollHeight)
+  }
+
+  // document.addEventListener('scroll', (e) => {
+
+  //   if (whatsAppButton) {
+  //     if (window.scrollY > 100) {
+  //       whatsAppButton?.classList.add('opacity-1')
+  //       whatsAppButton?.classList.remove('opacity-0')
+  //     } else {
+  //       whatsAppButton?.classList.remove('opacity-1')
+  //       whatsAppButton?.classList.add('opacity-0')
+  //     }
+  //   }
+  // })
+</script>

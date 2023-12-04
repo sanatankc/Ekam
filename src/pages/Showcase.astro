@@ -26,45 +26,45 @@ const heading = title || "Featured Updates";
 ---
 
 <Section
-  class="text-black py-9 pr-0"
+  class="text-black py-9 pr-0 max-md:pr-0 max-md:pl-0"
   style={{
     background:
       "linear-gradient(180deg, rgba(255, 227, 193, 0.35) 0%, rgba(244, 179, 62, 0.10) 100%)",
   }}
 >
   <div
-    class="w-full flex flex-row max-md:flex-col max-md:items-start justify-between items-center pr-9 max-md:pr-0"
+    class="w-full flex flex-row max-md:flex-col max-md:items-start justify-between items-center pr-9 max-md:pr-0 max-md:pl-[20px]"
   >
     <Sal preset="slide-up">
       <Text type="h2">Featured <span>Updates</span></Text>
     </Sal>
     <Sal preset="slide-up" d={300} class="flex flex-row items-center mt-1">
-      <Text type="base"  class="font-bold">
+      <Text type="base"  class="font-bold max-md:text-[14px]">
         Follow 
       </Text>
-      <div class="px-1"></div>
-      <Text type="base" class="font-bold">
+      <div class="px-1 max-md:px-[1px]"></div>
+      <Text type="base" class="font-bold max-md:text-[14px]">
         <a href="https://www.facebook.com/Edifyschoolecity/" target="_blank" class="flex flex-row text-primary relative top-[1px]">
           @EdifyEcity
-          <div class="px-1"></div>
+          <div class="px-1 max-md:px-[1px]"></div>
     
           <div class="w-[30px] h-[30px] text-[#0B88EF] max-sm:w-[28px] max-sm:h-[28px]">
             <Fragment set:html={fb} />
           </div>
         </a>
       </Text>
-      <div class="px-1"></div>
+      <div class="px-1 max-md:px-[1px]"></div>
 
       
-      <Text type="base"  class="font-bold">
+      <Text type="base"  class="font-bold max-md:text-[14px]">
         for more updates!
       </Text>
     </Sal>
   </div>
-  <p class="p-4 max-md:p-2"></p>
+  <p class="p-4 max-md:p-1"></p>
   <Sal preset="fade">
     <Carousel
-      class="gap-6 pt-4 pl-4"
+      class="gap-6 pt-4 pl-4 overflow-scroll max-md:pl-[20px]"
       id="featured-updates"
       arrowsContainerClass="mt-4"
     >

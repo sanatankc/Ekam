@@ -14,6 +14,7 @@ interface Menu {
   submenu?: {
     title: string;
     link: string;
+    forceInactive?: boolean;
   }[];
 }
 const menu: Array<Menu> = [
@@ -40,6 +41,7 @@ const menu: Array<Menu> = [
     submenu: [
       { title: 'CBSE Curriculum', link: '/cbse' },
       { title: 'CAIE Curriculum', link: '/caie' },
+      { title: 'Inquiry based learning', link: '/about-us#inquirybasedlearning', forceInactive: true },
       { title: 'Assessment', link: '/assessment' },
       { title: 'STEM', link: '/stem' },
       // { title: 'Clubs', link: '/clubs' },
@@ -57,6 +59,10 @@ const menu: Array<Menu> = [
   {
     title: "Admissions",
     link: "/admissions",
+  },
+  {
+    title: "Careers",
+    link: "/career",
   },
   
 ];
@@ -99,7 +105,18 @@ const removeHash = url => {
   return url.slice(0, hashIndex)
 }
 
-console.log('activePath --> ', Astro.url)
+const shouldBeActive = (item, activePath) => {
+  // item.link === activePath || 
+  // item.submenu.map(({ link }) => removeHash(link)).includes(activePath)
+  const submenuItem = item.submenu.find(({ link }) => {
+    const active = removeHash(link) === activePath
+    return active
+  })
+  console.log('submenuItem...', submenuItem)
+  // console.log('forceInactive...', forceInactive)
+
+  return item.link === activePath || (!!submenuItem && !submenuItem.forceInactive)
+}
 ---
 <div class="fixed z-[999] bg-white">
   <div class="py-2 max-md:pt-2 max-md:pb-0 w-full max-md:px-2 transition-all bg-primary max-md:bg-white menu-bar max-md:[&.active]:bg-[#fff6ea] px-12 text-white flex flex-row items-center justify-between max-md:flex-col max-md:gap-3">
@@ -179,7 +196,7 @@ console.log('activePath --> ', Astro.url)
                       href={item.link}
                       class:list={[
                         "text-black font-semibold hover:underline font-sans",
-                        (item.link === activePath || item.submenu.map(({ link }) => removeHash(link)).includes(activePath)) && "!text-primary",
+                        shouldBeActive(item, activePath) && "!text-primary",
                       ]}
                     >
                       {item.title}
@@ -187,7 +204,7 @@ console.log('activePath --> ', Astro.url)
                   ) : (
                     <span 
                       class:list={["text-black font-semibold hover:underline font-sans",
-                      (item.link === activePath || item.submenu.map(({ link }) => removeHash(link)).includes(activePath)) && "!text-primary",
+                      shouldBeActive(item, activePath) && "!text-primary",
                     ]}
                     >
                       {item.title}
@@ -204,7 +221,7 @@ console.log('activePath --> ', Astro.url)
                         clip-rule="evenodd"
                         d="M5.94524 9.20954C6.16089 8.95794 6.53967 8.9288 6.79127 9.14446L12.0008 13.6098L17.2103 9.14446C17.4619 8.9288 17.8407 8.95794 18.0563 9.20954C18.272 9.46113 18.2429 9.83991 17.9913 10.0556L12.3913 14.8556C12.1666 15.0482 11.835 15.0482 11.6103 14.8556L6.01032 10.0556C5.75872 9.83991 5.72958 9.46113 5.94524 9.20954Z"
                         class={
-                          (item.link === activePath || item.submenu.map(({ link }) => removeHash(link)).includes(activePath)) ? "fill-primary" : "fill-black"
+                          shouldBeActive(item, activePath) ? "fill-primary" : "fill-black"
                         }
                       />
                     </svg>
