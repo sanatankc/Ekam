@@ -63,24 +63,24 @@ const {
 </style>
 
 <script>
-  // import sal from 'sal.js'
+  import sal from 'sal.js'
 
-  // sal();
-	// const observer = new IntersectionObserver((entries) => {
-	// 	entries.forEach(entry => {
-	// 		const isIntersecting = (
-	// 			entry.isIntersecting
-	// 		) || entry.target.classList.contains('daisy-fixed')
-	// 		if (isIntersecting) {
-	// 			entry.target.classList.add('daisy-show')
-	// 		}
-	// 	})
-	// }, {
-	// 	root: document.querySelector("#scroll-area")
-	// })
+  sal();
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			const isIntersecting = (
+				entry.isIntersecting
+			) || entry.target.classList.contains('daisy-fixed')
+			if (isIntersecting) {
+				entry.target.classList.add('daisy-show')
+			}
+		})
+	}, {
+		root: document.querySelector("#scroll-area")
+	})
 
-	// const hiddenElements = document.querySelectorAll('.daisy')
-	// hiddenElements.forEach(element => {
-	// 	observer.observe(element)
-	// })
+	const hiddenElements = document.querySelectorAll('.daisy')
+	hiddenElements.forEach(element => {
+		observer.observe(element)
+	})
 </script>
