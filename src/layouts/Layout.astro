@@ -1,10 +1,14 @@
 ---
 export interface Props {
-	title: string;
+	title?: string;
+	description?: string;
 }
 import "../global.css"
 import '../../node_modules/sal.js/dist/sal.css';
-const { title = 'Best CBSE School in Bangalore | Ekam School' } = Astro.props;
+const { 
+	title = 'Best CBSE School in Bangalore | Ekam School',
+	description = 'Ekam Edify is affiliated to CBSE. It is ranked amongst the top CBSE schools in Bangalore. Enquire Now for AY 2024-25.'
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -18,7 +22,7 @@ const { title = 'Best CBSE School in Bangalore | Ekam School' } = Astro.props;
 		<!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"> -->
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<meta name="description" content="Ekam Edify is affiliated to CBSE. It is ranked amongst the top CBSE schools in Bangalore. Enquire Now for AY 2024-25." />
+		<meta name="description" content={description} />
 		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,9 +63,9 @@ const { title = 'Best CBSE School in Bangalore | Ekam School' } = Astro.props;
 </style>
 
 <script>
-  import sal from 'sal.js'
+  // import sal from 'sal.js'
 
-  sal();
+  // sal();
 	// const observer = new IntersectionObserver((entries) => {
 	// 	entries.forEach(entry => {
 	// 		const isIntersecting = (
