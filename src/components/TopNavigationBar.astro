@@ -62,9 +62,18 @@ const menu: Array<Menu> = [
     link: "/admissions",
   },
   {
-    title: "Careers",
-    link: "/career",
-  },
+    title: 'Resources',
+    submenu: [
+      {
+        title: "Blogs",
+        link: "/blogs",
+      },
+      {
+        title: "Careers",
+        link: "/career",
+      },
+    ]
+  }
   
 ];
 
@@ -190,7 +199,7 @@ const { noSpacing = false } = Astro.props
                     <a
                       href={item.link}
                       class:list={[
-                        "text-black font-semibold hover:underline font-sans",
+                        "text-black font-semibold hover:underline font-sans text-[17px]",
                         shouldBeActive(item, activePath) && "!text-primary",
                       ]}
                     >
@@ -198,7 +207,7 @@ const { noSpacing = false } = Astro.props
                     </a>
                   ) : (
                     <span 
-                      class:list={["text-black font-semibold hover:underline font-sans",
+                      class:list={["text-black font-semibold hover:underline font-sans text-[17px]",
                       shouldBeActive(item, activePath) && "!text-primary",
                     ]}
                     >
@@ -241,7 +250,7 @@ const { noSpacing = false } = Astro.props
                         <a
                           href={subitem.link}
                           class:list={[
-                            "text-black font-semibold hover:underline font-sans",
+                            "text-black font-semibold hover:underline font-sans text-[17px]",
                             // subitem.link === activePath && '!text-primary'
                           ]}
                         >
