@@ -11,6 +11,7 @@ import { Image } from "astro:assets";
 interface Menu {
   title: string;
   link?: string;
+  noSpacing: boolean;
   submenu?: {
     title: string;
     link: string;
@@ -87,14 +88,6 @@ const ctaButtons: Array<{
     className: "apply-now-button",
     type: "primary",
   },
-  // {
-  //   title: 'Login',
-  //   link: config.ctaLink,
-  //   type: 'default',
-  //   menu: true,
-
-  //   icon: ExternalIcon,
-  // }
 ];
 
 const activePath = Astro.url.pathname;
@@ -117,6 +110,8 @@ const shouldBeActive = (item, activePath) => {
 
   return item.link === activePath || (!!submenuItem && !submenuItem.forceInactive)
 }
+
+const { noSpacing = false } = Astro.props
 ---
 <div class="fixed z-[999] bg-white">
   <div class="py-2 max-md:pt-2 max-md:pb-0 w-full max-md:px-2 transition-all bg-primary max-md:bg-white menu-bar max-md:[&.active]:bg-[#fff6ea] px-12 text-white flex flex-row items-center justify-between max-md:flex-col max-md:gap-3">
@@ -378,7 +373,9 @@ const shouldBeActive = (item, activePath) => {
     </div>
   </header>
 </div>
-<div class="max-md:h-[120px] h-[120px]"></div>
+{!noSpacing && 
+  <div class="max-md:h-[120px] h-[120px]"></div>
+}
 
 <style>
   .menu {
