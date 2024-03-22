@@ -96,7 +96,7 @@ const headerColors = [
 
 
         <div class="flex md:gap-[30px] px-1 md:self-start self-start gap-0 md:justify-start w-full">
-          <a href="/blogs/All">
+          <a href="/blogs">
             <div class:list={[
               "[&.active]:bg-slate-300/50 px-[10px] font-[600] cursor-pointer py-[8px] rounded-md",
               isAllActive()]} data-tab-btns>
@@ -105,7 +105,7 @@ const headerColors = [
           </a>
 
           {categories.map(category => (
-            <a href={`/blogs/${category}`} class="flex-shrink-0">
+            <a href={`/blogs/category/${category}`} class="flex-shrink-0">
               <div class:list={[
                 "[&.active]:bg-slate-300/50 px-[10px] font-[600] cursor-pointer py-[8px] rounded-md",
                 isActive(category)
