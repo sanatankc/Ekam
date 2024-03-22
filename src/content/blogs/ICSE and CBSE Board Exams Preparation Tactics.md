@@ -1,6 +1,6 @@
 ---
 category: Education
-publishedDate: 2024-02-14T18:30:00.000Z
+publishedDate: 2024-02-10T18:30:00.000Z
 title: Simple Tactics to Ace ICSE and CBSE Boards Exams
 thumbnail: /images/Ekam/cbse exam.jpg
 caption: ''
