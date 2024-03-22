@@ -1,15 +1,15 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import TopNavigationBar from "../../../components/TopNavigationBar.astro";
-import Text from "../../../components/system/Text.astro";
+import Layout from "../../layouts/Layout.astro";
+import TopNavigationBar from "../../components/TopNavigationBar.astro";
+import Text from "../../components/system/Text.astro";
 import { Image } from 'astro:assets';
-import BlogCard from '../../../components/BlogCard.astro'
+import BlogCard from '../../components/BlogCard.astro'
 
-import Footer from "../../../components/landingPage/Footer.astro";
-import "../../../global.css";
+import Footer from "../../components/landingPage/Footer.astro";
+import "../../global.css";
 import DownArrow from '../../icons/DownArrow.svg'
 import { getEntries, getCollection, type CollectionEntry } from 'astro:content';
-import MultiStyleText from "../../../components/system/MultiStyleText.astro";
+// import MultiStyleText from "../../../components/system/MultiStyleText.astro";
 
 export function getStaticPaths() {
   return [
@@ -99,7 +99,7 @@ const headerColors = [
 
 
         <div class="flex md:gap-[30px] px-1 md:self-start self-start gap-0 md:justify-start w-full">
-          <a href="/blogs/category/All">
+          <a href="/blogs/All">
             <div class:list={[
               "[&.active]:bg-slate-300/50 px-[10px] font-[600] cursor-pointer py-[8px] rounded-md",
               isAllActive()]} data-tab-btns>
@@ -108,7 +108,7 @@ const headerColors = [
           </a>
 
           {categories.map(category => (
-            <a href={`/blogs/category/${category}`} class="flex-shrink-0">
+            <a href={`/blogs/${category}`} class="flex-shrink-0">
               <div class:list={[
                 "[&.active]:bg-slate-300/50 px-[10px] font-[600] cursor-pointer py-[8px] rounded-md",
                 isActive(category)
