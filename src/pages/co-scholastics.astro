@@ -117,60 +117,70 @@ const clubs = [
     description:
       "The Model United Nations Club offers students a practical understanding of <span>global diplomacy</span>. Immersed in discussions and procedural rules, they thrive in an atmosphere where mock MUNs prepare them for school-level conferences.",
     thumbnail: mun,
+    altText: "Model United Nations Club - Ekam School Electronic City - schools near Electronic City",
   },
   {
     title: ["Design & Technology", "Club"],
     description:
       "Students learn to use modern tools like <span>Photoshop and Animation</span> to learn about design concepts. They learn how to innovate and create prototypes, applying basic design principles through collaborative experiments.",
     thumbnail: design,
+    altText: "Design & Technology Club - Ekam School Electronic City - schools in Electronic City Bangalore",
   },
   {
     title: ["ECO Sustainability", "Club"],
     description:
       "Students learn about <span>eco-friendly practices</span> and methods to make a positive impact on the environment. Through campaigns, students raise community awareness about the importance of going green.",
     thumbnail: eco,
+    altText: "ECO Sustainability Club - Ekam School Electronic City - schools in Electronic City Phase 2 Bangalore",
   },
   {
     title: ["Community & Humane", "Society"],
     description:
       "Students learn to care for their community through drives and <span>outreach programs</span>. They also actively support and empower the less privileged while honing valuable life skills in the process.",
     thumbnail: humane,
+    altText: "Community & Humane Club - Ekam School Electronic City - schools near Electronic City Phase 1 Bangalore",
   },
   {
     title: ["Music", "Club"],
     description:
       "At Ekam, musical talents are celebrated with enthusiasm and passion. It caters to diverse musical tastes, offering voice coaching, <span>musical notation sessions, instrument lessons</span>, and opportunities for composing original scores.",
     thumbnail: music,
+    altText: "Music Club - Ekam School Electronic City - CBSE schools near Electronic City Bangalore",
   },
   {
     title: ["Literary", "Club"],
     description:
       "Students participate in <span>creative writing, book reviews, poetry readings, and storytelling sessions</span> to foster language skills and create a vibrant space for literary exploration.",
     thumbnail: literary,
+    altText: "Literary Club - Ekam School Electronic City - best CBSE schools in Electronic City",
   },
   {
     title: ["Visual Arts", "Club"],
     description:
       "Encouraging students to bring imagination to life, we use various materials and processes including <span>paint, paper, sculpture, and pottery</span>. The club invites students to perceive colors, shapes, textures, and designs differently.",
     thumbnail: visarts,
+    altText: "Visual Arts Club- Ekam School Electronic City - top schools in Electronic City",
   },
   {
     title: ["Performing Arts", "Club"],
     description:
       "This club supports active expression in <span>contemporary, classical, and western dance, drama, and theatre</span>. Students explore diverse styles, from narrative dances to plays, fostering excellence in their chosen form.",
     thumbnail: perfarts,
+    altText: "Performing Arts Club - Ekam School Electronic City - top 10 schools in Electronic City Bangalore",
   },
   {
     title: ["Cuisine", "Club"],
     description:
       "The Cuisine club encourages a passion for culinary arts and cooking. Students explore <span>flameless cooking, preparing dishes from global cuisines</span> and develop their understanding of flavor, texture, & cooking techniques.",
     thumbnail: cuisine,
+    altText: "Cuisine Club - Ekam School Electronic City - Best school in Electronic City schools list",
   },
   {
     title: ["Interact", "Club"],
     description:
       "The Interact Club, is the youth wing of the Rotary Club, and has associated with our school to give our residential students a platform to develop their leadership skills and foster a sense of social responsibility. Through the club, our students make an effort to reach out to the underprivileged and strive to make a tangible difference in their lives.",
     thumbnail: interactClub,
+    altText: "The Interact Club - Ekam School Electronic City - school near me",
   },
 ];
 
@@ -204,31 +214,37 @@ const sports = [
     title: "Cricket",
     description: "Cricket coaching covers all aspects of the game, emphasizing teamwork, strategic play, and skill development on well-equipped grounds.",
     thumbnail: cricket,
+    altText: "Cricket - Ekam Ecity - schools in Electronic City",
   },
   {
     title: "Basketball",
     description: "Basketball at our school focuses on teamwork, coordination, and agility, coached by experts on our professional-standard courts.",
     thumbnail: basketball,
+    altText: "Basketball - Ekam Ecity - schools in Electronic City Phase 1",
   },
   {
     title: "Football",
     description: "Our football program emphasizes physical fitness, strategic thinking, and teamwork, coached on well-maintained pitches for optimal training.",
     thumbnail: football,
+    altText: "Football - Ekam Ecity - best schools in Electronic City",
   },
   {
     title: "Swimming",
     description: "Our swimming program helps students develop strength and endurance while teaching vital safety skills in our state-of-the-art aquatic facility.",
     thumbnail: swimming,
+    altText: "Swimming - Ekam Ecity - good schools in Electronic City",
   },
   {
     title: "Handball",
     description: "Handball at our school combines speed, strength, and strategy, offering a dynamic team experience under skilled guidance.",
     thumbnail: throwball,
+    altText: "Handball - Ekam Ecity - Electronic City best schools",
   },
   {
     title: "Skating",
     description: "Skating classes improve balance, coordination, and strength, guided by skilled instructors in our safe, specially designed rinks.",
     thumbnail: skating,
+    altText: "Skating - Ekam Ecity - CBSE schools in Electronic City",
   },
 ];
 ---
@@ -247,7 +263,7 @@ const sports = [
         config={{ title: "Welcome to Ekam Academy", bgImage: campus1 }}
         showSlide={true}
         slideImages={[
-          { slide: clubsBG.src, position: "center 64%", type: "image" },
+          { slide: clubsBG.src, position: "center 64%", type: "image", altText: "Co-scholastics at Ekam School, Electronic City Bangalore - good CBSE schools in Electronic City" },
         ]}
         contentDirection="items-end"
         className="overflow-hidden font-roundo"
@@ -303,7 +319,7 @@ const sports = [
               ]}
               src={club.thumbnail}
               width={700}
-              alt={club.title}
+              alt={club.altText}
             />
             <div>
               <Text type="h4" class="mt-4">
@@ -359,7 +375,7 @@ const sports = [
               ]}
               src={club.thumbnail}
               width={700}
-              alt={club.title[0] + ' ' + club.title[1]}
+              alt={club.altText}
             />
             <div>
               <Text type="h4" class="mt-4">

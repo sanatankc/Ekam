@@ -33,6 +33,7 @@ const bgImage = showSlide ? slideImages : config.bgImage;
             {
               slide,
               position,
+              altText,
               type,
               picture,
               mobileOnly,
@@ -40,6 +41,7 @@ const bgImage = showSlide ? slideImages : config.bgImage;
             }: {
               slide: string;
               position: string;
+              altText: string;
               type: string;
               picture: boolean;
             },
@@ -69,7 +71,7 @@ const bgImage = showSlide ? slideImages : config.bgImage;
                   ))}
                   <img
                     src={slide[0]}
-                    alt="slide-img"
+                    alt={altText}
                     class="w-full h-full object-cover"
                     style={{
                       objectPosition: position,

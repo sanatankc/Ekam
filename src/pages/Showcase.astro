@@ -16,10 +16,10 @@ import ganesh from "../image/updates/ganesh.jpg";
 import scribble1 from "../fillers/scribble1.svg";
 
 const config = [
-  { img: mother, title: "Mother Toddler Session" },
-  { img: ganesh, title: "Gowri Ganesha Celebrations" },
-  { img: hindidivas, title: "Hindi Divas Celebration" },
-  { img: yogaDay, title: "Celebration of Yoga Day" },
+  { img: mother, title: "Mother Toddler Session", altText: "Mother Toddler Session at Ekam one of Electronic City best schools" },
+  { img: ganesh, title: "Gowri Ganesha Celebrations", altText: "Gowri Ganesha Celebrations at Ekam International School, Ecity"  },
+  { img: hindidivas, title: "Hindi Divas Celebration", altText: "Hindi Divas Celebration at Ekam Ecity, best schools in Electronic City"  },
+  { img: yogaDay, title: "Celebration of Yoga Day", altText: "Celebration of Yoga Day at Ekam one of Electronic City best schools"  },
 ];
 const { title, showSocial = true } = Astro.props;
 const heading = title || "Featured Updates";
@@ -74,7 +74,7 @@ const heading = title || "Featured Updates";
             <div class="relative">
               <Image
                 src={image.img}
-                alt="Carousel Temp Image"
+                alt={image.altText}
                 class="w-[500px] h-[350px] max-md:w-[250px] max-md:h-[280px] object-cover object-center rounded-lg"
               />
               {index % 2 === 0 && (

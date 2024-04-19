@@ -22,18 +22,20 @@ const testimonials = {
         quote: "Ekam’s warm and supportive environment has played a vital role in shaping my child's educational journey and personal development. We’re delighted to call our child an Edifian!",
         ctaText: 'Watch Video',
         ctaLink: '',
-        author: '- MS. VIJAYALAKSHMI, PARENT'
+        author: '- MS. VIJAYALAKSHMI, PARENT',
+        altText: "Ekam International School Ecity Parent Review"
       },
       {
         image: testimonial2,
         quote: "Experiencing continuous growth over the past year, I've felt supported and welcomed since day one. This school provides an excellent platform for me to build confidence.",
         author: '- PRERnA (grade 10)',
+        altText: "Ekam International School Ecity Student Review"
       },
       {
         image: testimonial1,
         quote: 'I cherish my school for its supportive and friendly teachers who not only enhance our skill sets but also instill invaluable moral values, creating a nurturing learning environment.',
         author: '- VIHANA, STAGE 6, igcse',
-
+        altText: "Ekam International School Ecity Review"
       },
     ],
 }
@@ -136,6 +138,7 @@ const subtitle = testimonials.subtitle;
             quote={item.quote}
             author={item?.author}
             image={item.image}
+            altText={item.altText}
             ctaText={item.ctaText}
             ctaLink={item.ctaLink}
             className="bg-transparent  rounded-bl-[50px]"

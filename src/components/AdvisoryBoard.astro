@@ -17,37 +17,44 @@ const advisory = [
   {
     name: "Major General B.S Nealakantappa",
     description: "Veteran of the Indo-Pak wars, served 35 years in the Indian Army; associated with Runto Projects and Lemon Cements Ltd.",
-    image: neelkantappa
+    image: neelkantappa,
+    altText: "Major General B.S Nealakantappa, Ekam Ecity - Best schools in Electronic City"
   },
   {
     name: "Saswathi Belliyappa",
     description: "Experienced urban planner and consultant with U.N Habitat and World Bank; trustee of Samvad Foundation; Ph.D. candidate.",
-    image: saswathi
+    image: saswathi,
+    altText: "Saswathi Belliyappa, Ekam Ecity - Good schools in Electronic City"
   },
   {
     name: "Pawan Kumar",
     description: "Renowned Kannada film director and actor; founder of Act or Productions theater; multiple award recipient, including for the film Lucia.",
-    image: pawan
+    image: pawan,
+    altText: "Pawan Kumar, Ekam Ecity - Electronic City best schools"
   },
   {
     name: "Dr. A. Jagdeesh",
     description: "Established psychiatrist; founder of Abaya Hospital and institutes; former HOD of psychiatry at K.I.M.S; published author.",
-    image: jagdeesh
+    image: jagdeesh,
+    altText: "Dr. A. Jagdeesh, Ekam Ecity - CBSE schools in Electronic City"
   },
   {
     name: "Ajit Mantagani",
     description: "Former CEO at several prominent companies; BE from Suratkal, IIM(A) alumnus; accredited business mentor and founder of Gameplan Consultancy.",
-    image: ajitMontagony
+    image: ajitMontagony,
+    altText: "Ajit Mantagani, Ekam Ecity - Schools near Electronic City, Bangalore"
   },
   {
     name: "Prof Rajeev Gowda",
     description: "IIM(B) professor; Indian National Congress spokesperson; RBI and GIC director; Wharton PhD; global educator and author.",
-    image: rajeev
+    image: rajeev,
+    altText: "Prof Rajeev Gowda, Ekam Ecity - Schools in Electronic City Phase 2 Bangalore"
   },
   {
     name: "Dr. Malathi K Holla",
     description: "International Para Athlete; Padmashri and Arjun Awardee; Syndicate Bank Chief Manager; NGO founder; motivational speaker.",
-    image: holla
+    image: holla,
+    altText: "Dr. Malathi K Holla, Ekam Ecity - Schools near Electronic City Phase 1 Bangalore"
   },
 ]
 ---
@@ -68,7 +75,7 @@ const advisory = [
                 <Image
                   src={advisor.image}
                   class="w-full h-full object-cover object-top"
-                  alt={advisor.name}
+                  alt={advisor.altText}
                 />
               </div>
               <div

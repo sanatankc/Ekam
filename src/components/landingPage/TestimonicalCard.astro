@@ -7,12 +7,13 @@ interface TestimonialProps {
   quote: string;
   author: string;
   ctaText: string;
+  altText: string;
   ctaLink: string;
   imageFade?: boolean;
   className?: string;
 }
 
-const {image,quote,author,ctaText,ctaLink,imageFade=false,className} = Astro.props as TestimonialProps
+const {image,quote,author,ctaText,altText,ctaLink,imageFade=false,className} = Astro.props as TestimonialProps
 ---
 
 <div class=`overflow-hidden mt-l flex flex-row  max-md:flex-col max-md:px-2 max-md:py-4 max-md:h-auto ${className} max-md:py-0 flex-1`>
@@ -23,6 +24,7 @@ const {image,quote,author,ctaText,ctaLink,imageFade=false,className} = Astro.pro
       <img  
         src=`${image.src}`
         class="object-contain max-h-[200px] rounded-[22px]"
+        alt={altText}
       />
     </slot>
     <div class='flex flex-col justify-around px-14 max-md:px-0 max-md:items-center'>
