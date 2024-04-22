@@ -14,7 +14,7 @@ import Constrain from '../system/Constrain.astro'
 import theDotStudioLogo from '../../images/theDotStudioLogo.png'
 
 
-const url = `https://www.thedotstudio.in/?utm_source=SchoolWebsite&utm_medium=footer&utm_content=${Astro.url.origin}`
+const url = `https://www.thedotstudio.in/?utm_source=SchoolWebsite&utm_medium=footer&utm_content=`
 ---
 <div
   class='w-full pt-12 flex flex-col items-center text-black bg-white border-t border-black/10'>
@@ -210,10 +210,20 @@ const url = `https://www.thedotstudio.in/?utm_source=SchoolWebsite&utm_medium=fo
       </div>
       <div class="max-md:pt-3 pt-0"></div>
       <div>
-        <a href={url} target="_blank">
+        <a href={url} target="_blank" data-dot-studio-footer>
           <Image src={theDotStudioLogo} class="w-[200px] max-md:w-[160px]" alt={"Website Designed by The Dot Studio"} />
         </a>
       </div>
     </Constrain>
   </div>
 </div>
+
+<script>
+  // get the current domain
+  
+  const currentDomainBase = window.location.origin;
+
+  const dotStudioLogo = document.querySelector('[data-dot-studio-footer]');
+
+  dotStudioLogo.href = dotStudioLogo.href + `${currentDomainBase}`
+</script>
