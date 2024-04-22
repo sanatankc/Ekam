@@ -13,6 +13,7 @@ import Text from '../system/Text.astro'
 import Constrain from '../system/Constrain.astro'
 import theDotStudioLogo from '../../images/theDotStudioLogo.svg'
 
+const url = `https://www.thedotstudio.in/?utm_source=SchoolWebsite&utm_medium=footer&utm_content=${Astro.url.origin}`
 ---
 <div
   class='w-full pt-12 flex flex-col items-center text-black bg-white border-t border-black/10'>
@@ -208,8 +209,8 @@ import theDotStudioLogo from '../../images/theDotStudioLogo.svg'
       </div>
       <div class="max-md:pt-3 pt-0"></div>
       <div>
-        <a href="https://thedotstudio.in/" target="_blank">
-          <Image src={theDotStudioLogo} class="w-[250px] max-md:w-[200px]" alt={"The Dot Studio Logo"} />
+        <a href={url} target="_blank">
+          <Image src={theDotStudioLogo} class="w-[200px] max-md:w-[160px]" alt={"Website Designed by The Dot Studio"} />
         </a>
       </div>
     </Constrain>
