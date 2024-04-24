@@ -4,6 +4,7 @@ import scribble from "../../fillers/scribble.png";
 interface Props {
   type:
     | "h1"
+    | "h1Sm"
     | "h2"
     | "h3"
     | "h4"
@@ -27,6 +28,24 @@ const { type = "base", class: className, style = {}, ...props } = Astro.props;
     <h1
       class:list={[
         "font-display font-extrabold text-[56px] max-md:text-[2rem] [&>span]:text-primary  leading-[120%]",
+        className,
+      ]}
+      style={style}
+      {...props}
+    >
+      <slot />
+    </h1>
+  )
+}
+{
+  type === "h1Sm" && (
+    <h1
+      class:list={[
+        `font-display font-extrabold text-5xl max-md:text-[2rem] 
+         [&>span]:text-primary 
+         [&>span]:text-primary 
+         leading-[120%]
+        `,
         className,
       ]}
       style={style}
